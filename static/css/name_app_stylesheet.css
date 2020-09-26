@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="/w3css/3/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 body {background-color: whitesmoke;}
 h1   {color: salmon;}
@@ -37,7 +35,7 @@ footer {color: white;}
   text-align: center;
   border: 0px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 200px;
   align-self: center;
   top: 0;
   left: 0px;
