@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, Response
 
+app = Flask("nomi_app") #making an app
+
 #Home page
 @app.route("/about")    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 def landing_page():
