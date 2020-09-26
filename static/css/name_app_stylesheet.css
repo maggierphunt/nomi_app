@@ -17,3 +17,73 @@ footer {color: white;}
   width: width=device-width, initial-scale=1;
   height: 80px;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.noScrollBar {
+  -ms-overflow-style: none;
+}
+
+#header {
+  height: 120px;
+  width: 100%;
+  background-color: white;
+  color: lightslategray;
+  font-size: larger;
+  text-align: center;
+  border: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-self: center;
+  top: 0;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+/*bullets and links for header */
+ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-align: center;
+  display:inline-block;
+}
+
+li{
+  list-style-type: none;
+  margin: 0 3vw;
+  padding: 0;
+  display:inline-block;
+  text-align: center;
+}
+
+ul li a
+{display: inline-block;
+  position: relative;
+  display: block;
+}
+
+ul li  a:link {
+    color: salmon;
+    text-decoration: none;
+}
+
+ul li a:visited {
+    color: salmon;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: slategrey;
+    
+}
+
+ul li a:active {
+    color: salmon;
+    text-decoration: none;
+}
