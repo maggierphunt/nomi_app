@@ -1,1 +1,19 @@
+<link rel="stylesheet" href="/w3css/3/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+body {background-color: whitesmoke;}
+h1   {color: salmon;}
+h2   {color: black;}
+h3   {color: black;}
+h4   {color: salmon;}
+h5   {color: lightslategray;}
+p    {color: black;}
+footer {color: white;}
+
+#rcorners1 {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: width=device-width, initial-scale=1;
+  height: 80px;
+}
