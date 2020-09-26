@@ -12,7 +12,7 @@ app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
 #Home page
 @app.route("/about")    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-def about_page():
+def landing_page():
         return render_template("about_page.html") #runs the landing page
 
 #Input page
@@ -57,7 +57,7 @@ def landing_page():
 
 #Results
 @app.route("/results", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-def results_page():
+def landing_page():
         form_data = request.form
 
         FirstName = form_data["FirstName"]
@@ -72,5 +72,9 @@ def results_page():
         return render_template("display_page.html") #runs the landing page
 
 
+#About page
+@app.route("/about")    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
+def landing_page():
+        return render_template("about_page.html") #runs the landing page
 
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature.
