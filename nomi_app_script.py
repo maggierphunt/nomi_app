@@ -24,7 +24,7 @@ def landing_page():
         FreeTextContentFirstName = form_data["FreeTextContentFirstName"]        
         FreeTextContentLastName = form_data["FreeTextContentLastName"]  
 
-        return render_template("user_results_page.html") #runs the landing page
+        return render_template("display_page.html") #runs the landing page
 
 
 #About page
