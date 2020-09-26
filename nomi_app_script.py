@@ -12,11 +12,9 @@ app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024
 
 #Home page
 @app.route("/about")    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-def landing_page():
+def about_page():
         return render_template("about_page.html") #runs the landing page
 
-#Input page
-@app.route("/input", methods=["GET", "POST"])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 
 # Checks if extension is allowed
 def allowed_image(filename):
@@ -30,6 +28,12 @@ def allowed_image(filename):
         return True
     else:   
         return False
+
+
+#Input page
+@app.route("/input", methods=["GET", "POST"])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
+
+
 
 def landing_page():
 
@@ -57,7 +61,7 @@ def landing_page():
 
 #Results
 @app.route("/results", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-def landing_page():
+def results_page():
         form_data = request.form
 
         FirstName = form_data["FirstName"]
@@ -72,9 +76,5 @@ def landing_page():
         return render_template("display_page.html") #runs the landing page
 
 
-#About page
-@app.route("/about")    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-def landing_page():
-        return render_template("about_page.html") #runs the landing page
 
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature.
