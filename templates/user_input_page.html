@@ -6,6 +6,7 @@
         
     <!-- stylesheets -->    
     <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
@@ -33,14 +34,30 @@
       </nav>
     </div>
     <!-- end of header and nav bar --> 
+    
+<section> 
+
+  <form action="/input" method="POST" enctype="multipart/form-data"> 
+    <div class="image-upload--container">
+      <input type="file" id="file-btn" class="custom-file-input" name="image">
+      <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
+      <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
+    </div>
+  </form>
+
+</section>
+
+
+
     <!-- Footer -->
-<footer class="w3-container w3-padding-20 w3-center w3-gray w3-xlarge">
+<footer id="footer" class="w3-container w3-padding-20 w3-center w3-gray w3-xlarge">
 <footer class="w3-medium">
   Social media</a>
   <button type="button">+</button> <button type="button">-</button> 
   Dark mode</a><button type="button">Y/N</button>
 </footer>
 
+
 </body>
-</html></body>
+<script src="../static/js/name_app_javascript.js"></script>
 </html>
