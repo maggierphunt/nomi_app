@@ -7,6 +7,10 @@
     <!-- stylesheets -->    
     <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+   
+    <!-- scripts-->
+    <script src="../static/js/name_app_javascript.js"></script>
 
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
@@ -18,22 +22,25 @@
     
 </head>
   <body>
+    <div id="content-wrap">
     <!-- header and nav bar -->    
     <div id="header"><h1 class="header">Nomi</h1>
       <h7><i>get my name right</i></h7>
       <br>
       <nav>
       <ul>
-          <li>
+          <li class="current-page">
               <a href="/">Home</a>
           </li>
-          <li class="current-page">
+          <li>
               <a href="/about">About</a>
           </li>
       </ul>
       </nav>
     </div>
     <!-- end of header and nav bar --> 
+
+      <!-- image upload - to move!-->
     
 <section> 
 
@@ -49,15 +56,79 @@
 
 
 
+
+=======
+
+    <!-- form-->
+<div><p>Use the form below to submit information about your name.</p></div>
+    <form form method="post" action="/results" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="selectGender">Example select</label>
+        <select class="form-control" id="selectGender" name="selectGender">
+          <option>she/her/hers</option>
+          <option>he/him/his</option>
+          <option>they/them/their</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="string" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
+      </div>
+      <div class="form-group">
+        <label for="FirstNamePronounciation">First Name Pronunciation</label>
+        <input type="string" class="form-control" id="FirstNamePronounciation" name="FirstNamePronounciation" placeholder="e.g. mar-i-lin" required>
+      </div>
+      <div class="image-upload--container">
+      <input type="file" class="custom-file-input" id="FirstNameImage" name="FirstNameImage">
+      <label id="FirstNameImage" class="custom-file-label" for="FirstNameImage" name="FirstNameImage">Upload an image of how your first name is written here (optional)</label>
+      <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
+    </div>
+      <div class="form-group">
+        <label for="FirstNameRecording">Upload a recording of you saying your last name here (optional)</label>
+        <input type="file" class="form-control-file" id="FirstNameRecording" name="FirstNameRecording">
+      </div>
+      <div class="form-group">
+        <label for="FirstNameFreeTextContent">Further information about your first name</label>
+        <textarea class="form-control" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="string" class="form-control" id="LastName" name="LastName" placeholder="Enter your last name here">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Last Name Pronunciation</label>
+        <input type="string" class="form-control" id="LastNamePronounciation" name="LastNamePronounciation" placeholder="e.g. mon-ro">
+      </div>
+      <div class="image-upload--container">
+      <input type="file" class="custom-file-input" id="LastNameImage" name="LastNameImage">
+      <label id="LastNameImage" class="custom-file-label" for="LastNameImage" name="LastNameImage">Upload an image of how your last name is written here (optional)</label>
+      <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
+    </div>
+      <div class="form-group">
+        <label for="LastNameRecording">Upload a recording of you saying your last name here (optional)</label>
+        <input type="file" class="form-control-file" id="LastNameRecording" name="LastNameRecording">
+      </div>
+      <div class="form-group">
+        <label for="LastNameFreeTextContent">Further information about your last name</label>
+        <textarea class="form-control" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="ConsentUnderStand">
+        <label class="form-check-label" for="ConsentUnderStand" name="ConsentUnderStand" required>I understand that my data will be stored locally.</label>
+      </div>
+      <button type="submit" id="submit-button-for-form" class="btn btn-primary">Submit</button>
+    </form>
     <!-- Footer -->
-<footer id="footer" class="w3-container w3-padding-20 w3-center w3-gray w3-xlarge">
-<footer class="w3-medium">
+
+  <footer class="w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
+
   Social media</a>
   <button type="button">+</button> <button type="button">-</button> 
   Dark mode</a><button type="button">Y/N</button>
 </footer>
 
 
+</div>
 </body>
-<script src="../static/js/name_app_javascript.js"></script>
+
 </html>
