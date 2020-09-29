@@ -16,16 +16,6 @@ footer {color: white;}
   height: 80px;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.noScrollBar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE and Edge */
-.noScrollBar {
-  -ms-overflow-style: none;
-}
-
 #header {
   height: 120px;
   width: 100%;
@@ -41,6 +31,10 @@ footer {color: white;}
   left: 0px;
   right: 0px;
   position: absolute;
+}
+#content-wrap {
+  padding-top: 250px; /*header height */
+  padding-bottom: 20px;    /* Footer height */
 }
 
 /*bullets and links for header */
