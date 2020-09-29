@@ -21,7 +21,7 @@
     <meta name="keywords" content="python,HTML,CSS,javascript,name,API,etymology,heritage,origins,diversity,inclusion">
     
 </head>
-  <body>
+<body class="noscrollbar">
     <div id="content-wrap">
     <!-- header and nav bar -->    
     <div id="header"><h1 class="header">Nomi</h1>
@@ -42,11 +42,9 @@
 
     <!-- image upload - to move!-->
     
-
-
-
     <!-- form-->
-<div><p>Use the form below to submit information about your name.</p></div>
+<div><br>
+  <p>Use the form below to submit information about your name.</p></div>
     <form form method="post" action="/results" onsubmit="return results_page()" id="user_details_form" enctype="multipart/form-data">
       <div class="form-group">
         <label for="selectGender">Example select</label>
@@ -106,6 +104,7 @@
       </div>
       <button type="submit" id="submit-button-for-form" class="btn btn-primary">Submit</button>
     </form>
+  </div>
     <!-- Footer -->
 
   <footer class="w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
