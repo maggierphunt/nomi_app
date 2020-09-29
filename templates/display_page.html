@@ -38,36 +38,37 @@
 
 <div>
 <head class="w3-center">
-  {% for key, value in results_page.items() %}
-<h2></h2>{{firstName}}
 
-{{lastName}}</h2>
-</h2>
+<h1>{{FirstName}}
+
+{{LastName}}</h1>
+
 <h5>
  
   {{FirstNamePronounciation}}
+-
+  {{LastNamePronounciation}}</h5>
 
-  {{LastNamePronounciation}}
-    <br>
-    {{gender}}
+    <p>{{Gender}}</p>
 
  
-</h5>
+
 </head>
 
 <!-- <img src="data:image, {{ FirstNameImage }}"> -->
-<b>First Name: Origin and meaning</b>
+<h5>{{FirstName}}</h5>
+<i>Origin and meaning</i>
 <br>
 {{FreeTextContentFirstName}}
-</p>
+</p><br>
 <!-- <img src="data:image, {{ LastNameImage }}"> -->
 
-<b>Last Name: Origin and meaning</b>
+<h5>{{LastName}}</h5>
+<i>Origin and meaning</i>
 <br>
-{{FreeTextContentLastName}} 
+{{FreeTextContentLastName}}
 </p>
 
-{% endfor %}
 </div>
     <!-- Footer -->
   

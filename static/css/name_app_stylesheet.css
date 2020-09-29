@@ -1,5 +1,6 @@
 body {
-	background-color: whitesmoke;
+  background-color: whitesmoke;
+  align-content: center;
 }
 h1 {
 	color: salmon;
@@ -50,8 +51,9 @@ footer {
   
 }
 #content-wrap {
-  padding-top: 250px; /*header height */
+  padding-top: 150px; /*header height */
   padding-bottom: 20px;    /* Footer height */
+  text-align: center;
 }
 
 /*bullets and links for header */
