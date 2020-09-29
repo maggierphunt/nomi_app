@@ -30,15 +30,6 @@ footer {
 }
 
 
-body {background-color: whitesmoke;}
-h1   {color: salmon;}
-h2   {color: black;}
-h3   {color: black;}
-h4   {color: salmon;}
-h5   {color: lightslategray;}
-p    {color: black;}
-footer {color: white;}
-
 
 #header {
 	height: 120px;
@@ -49,7 +40,7 @@ footer {color: white;}
 	text-align: center;
 	border: 0px;
 	padding-top: 20px;
-	padding-bottom: 250px;
+	padding-bottom: 20px;
 	align-self: center;
 	top: 0;
 	left: 0px;

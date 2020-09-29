@@ -47,7 +47,7 @@
 
     <!-- form-->
 <div><p>Use the form below to submit information about your name.</p></div>
-    <form form method="post" action="/results" enctype="multipart/form-data">
+    <form form method="post" action="/results" onsubmit="return results_page()" id="user_details_form">
       <div class="form-group">
         <label for="selectGender">Example select</label>
         <select class="form-control" id="selectGender" name="selectGender">
@@ -64,23 +64,16 @@
         <label for="FirstNamePronounciation">First Name Pronunciation</label>
         <input type="string" class="form-control" id="FirstNamePronounciation" name="FirstNamePronounciation" placeholder="e.g. mar-i-lin" required>
       </div>
-      <section> 
-
-        <form action="/input" method="POST" enctype="multipart/form-data"> 
+ 
+        <form method="POST" enctype="multipart/form-data"> 
           <div class="image-upload--container">
             <input type="file" id="file-btn" class="custom-file-input" name="image">
             <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
-            <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
+            <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>
           </div>
         </form>
+ 
       
-      </section>
-      
-      <div class="image-upload--container">
-      <input type="file" class="custom-file-input" id="FirstNameImage" name="FirstNameImage">
-      <label id="FirstNameImage" class="custom-file-label" for="FirstNameImage" name="FirstNameImage">Upload an image of how your first name is written here (optional)</label>
-      <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
-    </div>
       <div class="form-group">
         <label for="FirstNameRecording">Upload a recording of you saying your last name here (optional)</label>
         <input type="file" class="form-control-file" id="FirstNameRecording" name="FirstNameRecording">
@@ -97,11 +90,6 @@
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
         <input type="string" class="form-control" id="LastNamePronounciation" name="LastNamePronounciation" placeholder="e.g. mon-ro">
       </div>
-      <div class="image-upload--container">
-      <input type="file" class="custom-file-input" id="LastNameImage" name="LastNameImage">
-      <label id="LastNameImage" class="custom-file-label" for="LastNameImage" name="LastNameImage">Upload an image of how your last name is written here (optional)</label>
-      <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
-    </div>
       <div class="form-group">
         <label for="LastNameRecording">Upload a recording of you saying your last name here (optional)</label>
         <input type="file" class="form-control-file" id="LastNameRecording" name="LastNameRecording">

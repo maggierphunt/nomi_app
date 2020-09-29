@@ -61,7 +61,7 @@ def landing_page():
 
 #Results
 @app.route("/results", methods=['GET', 'POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-def results_page(firstName):
+def results_page(FirstName):
 
         form_data = request.form
 
