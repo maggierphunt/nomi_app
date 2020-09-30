@@ -270,7 +270,38 @@ input:checked + .slider:before {
 	border-radius: 50%;
 }
 
+/*display cards*/
+.display-card {
+	align-self: center;
+	align-content: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	width: 74%;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	border-radius: 5px;
+  	justify-content: center;
+  	flex-direction: row;
+ 	margin-bottom: 1%;
+	margin-top: 2%;
+  	display: inline-block;
 
+}
+.card-image-top {
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+	margin-bottom: 2px;
+}
+
+.display-card-body {
+	padding: 2px 16px;
+
+}
+
+.flex-container{
+    display: flex;
+    text-align: center;
+    }
 /*adapt to small screens */
 
 /*for small screens*/

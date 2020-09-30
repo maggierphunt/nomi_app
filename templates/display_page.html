@@ -36,9 +36,9 @@
     </div>
     <!-- end of header and nav bar --> 
 
-<div>
-<br>
 
+<br>
+<div class="display-card"">       <div class="display-card-body">
 <h2>{{FirstName}} {{LastName}}</h2>
 
 <h5>
@@ -46,21 +46,28 @@
   {{FirstNamePronounciation}} - {{LastNamePronounciation}}</h5>
 
     <p>{{Gender}}</p>
-
- 
-<!-- <img src="data:image, {{ FirstNameImage }}"> -->
+  </div>
+</div>
+    <div class="display-card"">
+      <img src="..." class="card-image-top" alt="Image of how to write my First Name">
+      <!-- <img src="data:image, {{ FirstNameImage }}"> -->
+      <div class="display-card-body">
 <h5>{{FirstName}}</h5>
 <i>Origin and meaning</i>
 <br>
 {{FreeTextContentFirstName}}
-</p><br>
+</p>      </div>
+    </div>
+    <div class="display-card"">
+      <img src="..." class="card-image-top" alt="Image of how to write my First Name">
 <!-- <img src="data:image, {{ LastNameImage }}"> -->
-
+<div class="display-card-body">
 <h5>{{LastName}}</h5>
 <i>Origin and meaning</i>
 <br>
 {{FreeTextContentLastName}}
-</p>
+</p></div>
+</div>
 </div>
 </div>
      <!-- Footer -->
