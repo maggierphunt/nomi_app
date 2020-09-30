@@ -3,6 +3,7 @@ body {
   align-content: center;
   
 }
+
 h1 {
 	color: white;
 }
@@ -143,11 +144,133 @@ h2 { color: salmon;}
 .noscrollbar::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE and Edge */
 .noscrollbar {
   -ms-overflow-style: none;
 }
+
+/* Footer */
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	height: 6.5rem;
+	width: 100%;
+	background-color: salmon;
+	color: #fff;
+}
+
+.footer-container {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.switch-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.switch-container p {
+	margin: 0 1em;
+	font-size: 1em;
+	color: #fff;
+}
+
+/* Share Button */
+
+.dropbtn {
+	cursor: pointer;
+}
+
+.dropbtn:hover {
+	opacity: 0.7;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+	position: absolute;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-social {
+	display: none;
+}
+
+.dropdown-content2 {
+	display: flex;
+	border: 2px solid black;
+}
+.dropdown-content2 a {
+	padding: 0 12em;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+	display: inline-block;
+	width: 100%;
+	height: 12em;
+	margin: 0 auto;
+	background-color: salmon;
+	display: flex;
+}
+
+/* Switch - Dark Mode */
+
+.switch-toggle {
+	display: inline-block;
+	height: 34px;
+	position: relative;
+	width: 60px;
+}
+
+.switch-toggle input {
+	display: none;
+}
+
+.slider {
+	background-color: rgb(245, 236, 236);
+	bottom: 0;
+	cursor: pointer;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	transition: .4s;
+}
+
+.slider:before {
+	background-color: rgb(240, 138, 138);
+	bottom: 4px;
+	content: "";
+	height: 26px;
+	left: 4px;
+	position: absolute;
+	transition: .4s;
+	width: 26px;
+}
+
+input:checked + .slider {
+	background-color: rgb(12, 39, 90);
+}
+
+input:checked + .slider:before {
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+
 /*adapt to small screens */
 
 /*for small screens*/
@@ -190,3 +313,4 @@ h2 { color: salmon;}
   #current-page {
 
   }
+

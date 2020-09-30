@@ -40,7 +40,27 @@
     </div>
     <!-- end of header and nav bar --> 
 
-    <!-- image upload - to move!-->
+    
+<section> 
+
+  <form action="/input" method="POST" enctype="multipart/form-data"> 
+    <div class="image-upload--container">
+      <input type="file" id="file-btn" class="custom-file-input" name="image">
+      <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
+      <button id="btn-upload" type="submit" class="btn btn-sm">Upload image</button>
+      
+
+        <!-- <p class="HTMLmessage">Message: {{ message_submit }}</p> -->
+       
+     
+ <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
+      
+
+    </div>
+  </form>
+
+</section>
+
     
     <!-- form-->
 <div><br>
@@ -109,13 +129,44 @@
 
   <footer class="w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
 
-  Social media</a>
+
+    <div class="footer-container">
+      
+      <div class="dropdown">
+        <a onclick="myFunction()"  onmouseout="clearShare()" class="dropbtn"><img class="share-photo" src="/static/images/share.png" alt="share"></a>
+        <div id="myDropdown" class="dropdown-social">
+          <div class="dropdown-content2">
+            <a href="#"><img src="/static/images/insta.png" alt="instagram"></a>
+            <a href="#"><img src="/static/images/twitter.png" alt="twitter"></a>
+            <a href="#"><img src="/static/images/facebook.png" alt="facebook"></a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- <a href="#"><img src="/static/images/share.png" alt="share"></a> -->
+
+      <div class="zoom-inout"> 
+        <a href="#"><img src="/static/images/minus.png" alt="zoom out"></a>
+        <a href="#"><img src="/static/images/plus.png" alt="zoom in"></a>
+      </div>
+      
+      <div class="switch-container">
+        <label class="switch-toggle" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <p>Enable Dark Mode</p>
+      </div>
+
+   
+ <a> Social media</a>
   <button type="button">+</button> <button type="button">-</button> 
   Dark mode</a><button type="button">Y/N</button>
 </footer>
 
 
 </div>
+
 </body>
 
 </html>
