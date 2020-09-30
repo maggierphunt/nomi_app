@@ -6,7 +6,8 @@
         
     <!-- stylesheets -->    
     <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,55 +17,60 @@
     <meta name="keywords" content="python,HTML,CSS,javascript,name,API,etymology,heritage,origins,diversity,inclusion">
     
 </head>
-  <body>
+<body class="noscrollbar">
+    <div id="content-wrap">
     <!-- header and nav bar -->    
     <div id="header"><h1 class="header">Nomi</h1>
       <h7><i>get my name right</i></h7>
       <br>
       <nav>
       <ul>
-          <li>
+          <li class="current-page">
               <a href="/">Home</a>
           </li>
-          <li class="current-page">
+          <li>
               <a href="/about">About</a>
           </li>
       </ul>
       </nav>
     </div>
-    <!-- end of header and nav bar -->    
+    <!-- end of header and nav bar --> 
+
 <div>
-<head class="w3-center">
-<h2>
-Marwa  Mouazen
-</h2>
+<br>
+
+<h2>{{FirstName}} {{LastName}}</h2>
+
 <h5>
-she/her/hers
-</h5>
-</head>
+ 
+  {{FirstNamePronounciation}} - {{LastNamePronounciation}}</h5>
 
-<p id="rcorners1"><button type="button">play</button> Mar-wa Moo-azz-an</p>
+    <p>{{Gender}}</p>
 
-<p id="rcorners1">
-<b>First Name: Origin and meaning</b>
+ 
+<!-- <img src="data:image, {{ FirstNameImage }}"> -->
+<h5>{{FirstName}}</h5>
+<i>Origin and meaning</i>
 <br>
-example text example text example text example text 
-</p>
+{{FreeTextContentFirstName}}
+</p><br>
+<!-- <img src="data:image, {{ LastNameImage }}"> -->
 
-<p id="rcorners1">
-<b>Second Name: Origin and meaning</b>
+<h5>{{LastName}}</h5>
+<i>Origin and meaning</i>
 <br>
-example text example text example text example text 
+{{FreeTextContentLastName}}
 </p>
-
 </div>
-  <!-- Footer -->
-<footer class="w3-container w3-padding-20 w3-center w3-gray w3-xlarge">
-<footer class="w3-medium">
-    Social media</a>
-    <button type="button">+</button> <button type="button">-</button> 
-    Dark mode</a><button type="button">Y/N</button>
-</footer>
-
-</body>
-</html>
+</div>
+    <!-- Footer -->
+  
+    <footer class="w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
+      Social media</a>
+      <button type="button">+</button> <button type="button">-</button> 
+      Dark mode</a><button type="button">Y/N</button>
+    </footer>
+    </div>
+  
+    </body>
+    </html>

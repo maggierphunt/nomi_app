@@ -1,15 +1,11 @@
-<link
-	rel="stylesheet"
-	href="/w3css/3/w3.css"
-	> <link
-	rel="stylesheet"
-	href="https://www.w3schools.com/w3css/4/w3.css"
-	> body {
-	background-color: whitesmoke;
+body {
+  background-color: whitesmoke;
+  align-content: center;
+  
 }
 
 h1 {
-	color: salmon;
+	color: white;
 }
 h2 {
 	color: black;
@@ -26,9 +22,8 @@ h5 {
 p {
 	color: black;
 }
-footer {
-	color: white;
-}
+
+
 
 * {
 	box-sizing: border-box;
@@ -36,29 +31,12 @@ footer {
 	margin: 0;
 }
 
-#rcorners1 {
-	border-radius: 25px;
-	background: #ffffff;
-	padding: 20px;
-	width: width=device-width, initial-scale=1;
-	height: 80px;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.noScrollBar::-webkit-scrollbar {
-	display: none;
-}
-
-/* Hide scrollbar for IE and Edge */
-.noScrollBar {
-	-ms-overflow-style: none;
-}
 
 #header {
-	height: 120px;
+	height: 150px;
 	width: 100%;
-	background-color: white;
-	color: lightslategray;
+  background-color: salmon;
+  color: white;
 	font-size: larger;
 	text-align: center;
 	border: 0px;
@@ -68,7 +46,29 @@ footer {
 	top: 0;
 	left: 0px;
 	right: 0px;
-	position: relative;
+  position: absolute;
+  line-height: 40px
+}
+
+footer {
+  background-color: salmon;
+  color: white;
+  height: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#content-wrap {
+  padding-top: 150px; /*header height */
+  padding-bottom: 20px;    /* Footer height */
+  padding-left: 30px; /*header height */
+  padding-right: 30px;    /* Footer height */
+  text-align: center;
+  word-wrap: break-word;
 }
 
 /*bullets and links for header */
@@ -95,12 +95,12 @@ ul li a {
 }
 
 ul li a:link {
-	color: salmon;
+	color: white;
 	text-decoration: none;
 }
 
 ul li a:visited {
-	color: salmon;
+	color: white;
 	text-decoration: none;
 }
 
@@ -109,15 +109,23 @@ ul li a:hover {
 }
 
 ul li a:active {
-	color: salmon;
+	color: white;
 	text-decoration: none;
 }
 
 /* Form - Image Upload */
 
 form {
-	padding: 2em;
+  padding: 2em;
+  align-items: left;
+  align-self: left;
+  text-align: left;
 }
+h1 {color: white;
+  font-size: xx-large;}
+
+h2 { color: salmon;}
+
 
 .image-upload--container {
 	position: relative;
@@ -128,7 +136,17 @@ form {
 
 #btn-upload {
 	margin: 1em 0;
-	background-color: salmon;
+  background-color: salmon;
+}
+
+/*hide scrollbar*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE and Edge */
+.noscrollbar {
+  -ms-overflow-style: none;
 }
 
 /* Footer */
@@ -251,3 +269,48 @@ input:checked + .slider:before {
 .slider.round:before {
 	border-radius: 50%;
 }
+
+
+/*adapt to small screens */
+
+/*for small screens*/
+@media only screen and (max-width: 500px) {
+    
+  #header {
+      height: 100px;
+      font-size: large;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+
+  }
+
+  #footer {
+      height: 25px;
+      font-size: small;
+      padding-top: 10px;
+
+  }
+
+  #content-wrap {
+      padding-top: 60px; /*header height */
+      padding-bottom: 20px;    /* Footer height */
+      padding-left: 150px;
+      padding-right: 150px;
+  }
+  ul{
+      align-self: center;
+      padding: 0;
+      display: flex;
+      text-align: center;
+      width: 100vw;
+      font-size: smaller;
+      display:inline-block;
+    }
+    
+  }
+ 
+  #current-page {
+
+  }
+
