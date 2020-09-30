@@ -50,7 +50,7 @@ p {
   line-height: 40px
 }
 
-footer {
+#footer-css {
   background-color: salmon;
   color: white;
   height: 50px;
@@ -151,7 +151,7 @@ h2 { color: salmon;}
 
 /* Footer */
 
-#footer {
+#footer-css {
 	position: fixed;
 	bottom: 0;
 	height: 6.5rem;
@@ -166,6 +166,7 @@ h2 { color: salmon;}
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+	background-color: salmon;
 }
 
 .switch-container {
@@ -316,11 +317,12 @@ input:checked + .slider:before {
 
   }
 
-  #footer {
+  #footer-css {
       height: 20px;
       font-size: small;
       padding-top: 10px;
 	position: fixed;
+	background-color: salmon;
   }
 
   #content-wrap {
