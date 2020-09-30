@@ -63,14 +63,45 @@
 </p>
 </div>
 </div>
-    <!-- Footer -->
-  
-    <footer class="w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
-      Social media</a>
-      <button type="button">+</button> <button type="button">-</button> 
-      Dark mode</a><button type="button">Y/N</button>
-    </footer>
-    </div>
-  
-    </body>
-    </html>
+     <!-- Footer -->
+
+  <footer class="w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
+
+
+    <div class="footer-container">
+      
+      <div class="dropdown">
+        <a onclick="myFunction()"  onmouseout="clearShare()" class="dropbtn"><img class="share-photo" src="/static/images/share.png" alt="share"></a>
+        <div id="myDropdown" class="dropdown-social">
+          <div class="dropdown-content2">
+            <a href="#"><img src="/static/images/insta.png" alt="instagram"></a>
+            <a href="#"><img src="/static/images/twitter.png" alt="twitter"></a>
+            <a href="#"><img src="/static/images/facebook.png" alt="facebook"></a>
+          </div>
+        </div>
+      </div>
+    
+      <!-- <a href="#"><img src="/static/images/share.png" alt="share"></a> -->
+
+      <div class="zoom-inout"> 
+        <a href="#"><img src="/static/images/minus.png" alt="zoom out"></a>
+        <a href="#"><img src="/static/images/plus.png" alt="zoom in"></a>
+      </div>
+      
+      <div class="switch-container">
+        <label class="switch-toggle" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <p>Enable Dark Mode</p>
+      </div>
+
+   
+</footer>
+
+
+</div>
+
+</body>
+
+</html>

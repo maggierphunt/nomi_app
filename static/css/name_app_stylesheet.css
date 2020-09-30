@@ -54,8 +54,8 @@ footer {
   background-color: salmon;
   color: white;
   height: 50px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -64,7 +64,7 @@ footer {
 
 #content-wrap {
   padding-top: 150px; /*header height */
-  padding-bottom: 20px;    /* Footer height */
+  padding-bottom: 150px;    /* Footer height */
   padding-left: 30px; /*header height */
   padding-right: 30px;    /* Footer height */
   text-align: center;
@@ -286,10 +286,10 @@ input:checked + .slider:before {
   }
 
   #footer {
-      height: 25px;
+      height: 20px;
       font-size: small;
       padding-top: 10px;
-
+	position: fixed;
   }
 
   #content-wrap {
@@ -311,6 +311,6 @@ input:checked + .slider:before {
   }
  
   #current-page {
-
+	color:white
   }
 
