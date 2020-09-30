@@ -33,7 +33,7 @@ p {
 
 
 #header {
-	height: 150px;
+	height: 180px;
 	width: 100%;
   background-color: salmon;
   color: white;
@@ -41,7 +41,7 @@ p {
 	text-align: center;
 	border: 0px;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 	align-self: center;
 	top: 0;
 	left: 0px;
@@ -49,7 +49,14 @@ p {
   position: absolute;
   line-height: 40px
 }
-
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	display: inline-block;
+	height: 100px;
+}
 #footer-css {
   background-color: salmon;
   color: white;
@@ -167,6 +174,7 @@ h2 { color: salmon;}
 	align-items: center;
 	height: 100%;
 	background-color: salmon;
+	flex-direction: row;
 }
 
 .switch-container {
@@ -179,6 +187,7 @@ h2 { color: salmon;}
 	margin: 0 1em;
 	font-size: 1em;
 	color: #fff;
+	display: inline-block;
 }
 
 /* Share Button */
@@ -191,6 +200,14 @@ h2 { color: salmon;}
 	opacity: 0.7;
 }
 
+/*zoom buttons centering*/
+#centered {
+	display: inline-block;
+	align-content: center;
+	justify-content: center;
+	flex-direction: row;
+
+}
 /* The container <div> - needed to position the dropdown content */
 
 .dropdown {
@@ -283,7 +300,7 @@ input:checked + .slider:before {
   	border-radius: 5px;
   	justify-content: center;
   	flex-direction: row;
- 	margin-bottom: 1%;
+ 	margin-bottom: 0.5%;
 	margin-top: 2%;
   	display: inline-block;
 
@@ -295,7 +312,7 @@ input:checked + .slider:before {
 }
 
 .display-card-body {
-	padding: 2px 16px;
+	padding: 2px 6px;
 
 }
 
@@ -318,15 +335,21 @@ input:checked + .slider:before {
   }
 
   #footer-css {
-      height: 20px;
-      font-size: small;
-      padding-top: 10px;
-		position: fixed;
+    height: 20px;
+    font-size: small;
+    padding-top: 10px;
+	position: fixed;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
 	background-color: salmon;
+	display: flex;
+    flex-direction: row;
   }
 
   #content-wrap {
-      padding-top: 60px; /*header height */
+      padding-top: 120px; /*header height */
       padding-bottom: 20px;    /* Footer height */
       padding-left: 150px;
       padding-right: 150px;

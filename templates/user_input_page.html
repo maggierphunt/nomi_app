@@ -50,6 +50,7 @@
       <div class="form-group">
         <label for="selectGender">Example select</label>
         <select class="form-control" id="selectGender" name="selectGender">
+          <option></option>
           <option>she/her/hers</option>
           <option>he/him/his</option>
           <option>they/them/their</option>
@@ -60,10 +61,17 @@
         <input type="string" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
       </div>
       <div class="form-group" >
-        <label for="FirstNamePronounciation">First Name Pronunciation</label>
-        <input type="string" class="form-control" id="FirstNamePronounciation" name="FirstNamePronounciation" placeholder="e.g. mar-i-lin" required>
+        <label for="FirstNamePronunciation">First Name Pronunciation</label>
+        <input type="string" class="form-control" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
       </div>
-   
+      <div class="form-group">
+        <label for="NickName">Do you go by another name?</label>
+        <input type="string" class="form-control" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?" required>
+      </div>
+      <div class="form-group" >
+        <label for="NickNamePronunciation">Preferred Name Pronunciation</label>
+        <input type="string" class="form-control" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin" required>
+      </div>   
       <div class="form-group">
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
         <textarea class="form-control" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
@@ -74,7 +82,7 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
-        <input type="string" class="form-control" id="LastNamePronounciation" name="LastNamePronounciation" placeholder="e.g. mon-ro">
+        <input type="string" class="form-control" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
       </div>
       <div class="image-upload--container">
         <input type="file" id="file-btn" class="custom-file-input" name="image">
@@ -103,7 +111,8 @@
   </div>
             <!-- Footer -->
 
-  <footer class="footer-css w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
+<footer class="footer-css"> <!-- w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge-->
+
 
 
     <div class="footer-css footer-container">
