@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+    </head>
+    <body>   
+        <button id="startRecording">Start</button>
+        <button id="stopRecording" disabled>Stop</button>
+        <button><a id="recordingLink">Download</a></button>
+    </body>
+    <script>
+        
+        navigator.mediaDevices.getUserMedia({audio:true})
+      .then(stream => {handlerFunction(stream)})
+
+            function handlerFunction(stream) {
+            rec = new MediaRecorder(stream);
+            rec.ondataavailable = e => {
+              audioChunks.push(e.data);
+              if (rec.state == "inactive"){
+                let blob = new Blob(audioChunks,{type:'audio/ogg'});
+                const url = URL.createObjectURL(blob);
+                recordingLink.href = url;
+                recordingLink.download = 'audio/ogg';
+              }
+            }
+          }
+
+        startRecording.onclick = e => {
+          startRecording.disabled = true;
+          stopRecording.disabled=false;
+          audioChunks = [];
+          rec.start();
+        }
+        
+        stopRecording.onclick = e => {
+          startRecording.disabled = false;
+          stopRecording.disabled=true;
+          rec.stop();
+        }
+        
+    </script>
+</html>
+
+
+
