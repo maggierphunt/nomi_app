@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, Response
 import os
 
+
 app = Flask("nomi_app") #making an app
 
 
@@ -57,11 +58,29 @@ def landing_page():
 
                         print('Image saved!')
                         
-                        message = 'The file was uploaded successfully'
-
+                        
+        #                 html = """
+        #  <html>
+        #    <body>
+        #    <p class="message">{HTMLmessage}</p>
+        #    </body>
+        #   </html>
+        #         """
+                        
+        #                 return html.format(HTMLmessage=message)
+                        # def submit_message():
+                        #         message_submit = "The file was uploaded successfully"
+                        #         return render_template("user_input_page.html", message_submit=message_submit) 
+                        
+                        # submit_message()v
+                        message_submit = "<script>`The file was uploaded successfully`</script>"
+                        return render_template("user_input_page.html", message_submit=message_submit)
                         return redirect(request.url)
-
+        
         return render_template("user_input_page.html") #runs the landing page
+
+
+     
 
 #Results
 @app.route("/results", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
