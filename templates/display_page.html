@@ -23,11 +23,11 @@
     
 </head>
 <body class="noscrollbar">
+  <br>
     <div id="content-wrap">
     <!-- header and nav bar -->    
     <div id="header"><h1 class="header">Nomi</h1>
       <h7><i>get my name right</i></h7>
-      <br>
       <nav>
       <ul>
           <li class="current-page">
@@ -41,36 +41,47 @@
     </div>
     <!-- end of header and nav bar --> 
 
-
 <br>
+{% if NickName %}
+    <div class="display-card"">
+<div class="display-card-body">
+<i>I go by</i> <h2>{{NickName}}</h2>
+<h5>{{NickNamePronunciation}} 
+</h5></div></div>
+{% else %} {% endif %}
+
 <div class="display-card"">       <div class="display-card-body">
 <h2>{{FirstName}} {{LastName}}</h2>
 
 <h5>
  
-  {{FirstNamePronounciation}} 
+  {{FirstNamePronunciation}} 
   
   {% if LastName %} 
-  - {{LastNamePronounciation}}
+  - {{LastNamePronunciation}}
 {% else %} {% endif %}
 </h5>
 
-    <p>{{Gender}}</p>
+{% if Gender %}<p>{{Gender}}</p>{% else %}
+{% endif %}
+
   </div>
 </div>
+
     <div class="display-card"">
       <img src="..." class="card-image-top" alt="Image of how to write my First Name">
       <!-- <img src="data:image, {{ FirstNameImage }}"> -->
       <div class="display-card-body">
         {% if LastName %} <h5>{{FirstName}}</h5>{% else %} {% endif %}
-<i>Origin and meaning</i>
+<i>Origin and meaning{% if NickName %} of {{FirstName}} 
+  {% else %} {% endif %}
+</i>
 <br>
 {{FreeTextContentFirstName}}
 </p>      </div>
     </div>
-
     {% if LastName %}
-    <div class="display-card"">
+    <div class="display-card""></div>
       <img src="..." class="card-image-top" alt="Image of how to write my First Name">
 <!-- <img src="data:image, {{ LastNameImage }}"> -->
 <div class="display-card-body">
@@ -87,7 +98,7 @@
 </div>
              <!-- Footer -->
 
-  <footer class="footer-css w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
+  <footer class="footer-css"> <!-- w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge-->
 
 
     <div class="footer-css footer-container">
@@ -105,7 +116,7 @@
     
       <!-- <a href="#"><img src="/static/images/share.png" alt="share"></a> -->
 
-      <div class="zoom-inout"> 
+      <div class="zoom-inout centered"> 
         <a href="#"><img src="/static/images/minus.png" alt="zoom out"></a>
         <a href="#"><img src="/static/images/plus.png" alt="zoom in"></a>
       </div>
