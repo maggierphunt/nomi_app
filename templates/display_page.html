@@ -48,7 +48,12 @@
 
 <h5>
  
-  {{FirstNamePronounciation}} - {{LastNamePronounciation}}</h5>
+  {{FirstNamePronounciation}} 
+  
+  {% if LastName %} 
+  - {{LastNamePronounciation}}
+{% else %} {% endif %}
+</h5>
 
     <p>{{Gender}}</p>
   </div>
@@ -57,12 +62,14 @@
       <img src="..." class="card-image-top" alt="Image of how to write my First Name">
       <!-- <img src="data:image, {{ FirstNameImage }}"> -->
       <div class="display-card-body">
-<h5>{{FirstName}}</h5>
+        {% if LastName %} <h5>{{FirstName}}</h5>{% else %} {% endif %}
 <i>Origin and meaning</i>
 <br>
 {{FreeTextContentFirstName}}
 </p>      </div>
     </div>
+
+    {% if LastName %}
     <div class="display-card"">
       <img src="..." class="card-image-top" alt="Image of how to write my First Name">
 <!-- <img src="data:image, {{ LastNameImage }}"> -->
@@ -72,7 +79,10 @@
 <br>
 {{FreeTextContentLastName}}
 </p></div>
+
 </div>
+
+{% else %} {% endif %}
 </div>
 </div>
      <!-- Footer -->
