@@ -1,38 +1,20 @@
 const dropdownContainer = document.querySelector('.dropdown');
-
 const zoomInOut = document.querySelector('.zoom-inout');
-
 const switchContainer = document.querySelector('.switch-container');
-
 const dropdownSocial = document.querySelector('.dropdown-social');
 
 function myFunction() {
 	dropdownContainer.classList.toggle('show');
-
 	zoomInOut.style.display = 'none';
-
 	switchContainer.style.display = 'none';
-
 	dropdownSocial.style.display = 'inline';
 }
 
 function clearShare() {
 	zoomInOut.style.display = 'inline';
-
 	switchContainer.style.display = 'inline';
-
 	dropdownSocial.style.display = 'none';
 }
-
-// document.querySelector('.dropbtn').addEventListener('click', function(e) {
-// 	if (e.target !== document.querySelector('.dropbtn')) {
-// 		console.log('You clicked outside');
-// 	} else {
-// 		console.log('You clicked inside');
-// 	}
-// });
-
-// document.addEventListener('click', function(event) {
 
 // Dark Mode Toggle
 
@@ -48,12 +30,6 @@ function darkmodeToggle() {
 }
 
 // Image Upload
-
-// Add the following code if you want the name of the file appear on select
-// $('.custom-file-input').on('change', function() {
-// 	var fileName = $(this).val().split('\\').pop();
-// 	$(this).siblings('.custom-file-label').addClass('selected').html(fileName);
-// });
 
 const customFileInput = document.querySelector('.custom-file-input');
 const customFileLabel = document.querySelector('.custom-file-label');
