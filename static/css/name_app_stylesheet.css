@@ -27,6 +27,7 @@ h5 {
 
 
 .header-container {
+
 	width: 100%;
 	background-color: salmon;
 	color: white;
@@ -325,8 +326,9 @@ input:checked + .slider:before {
 /*adapt to small screens */
 
 /*for small screens*/
+
 @media only screen and (max-width: 500px) {
-    
+
   #header {
       height: 100px;
       font-size: large;
@@ -369,5 +371,4 @@ input:checked + .slider:before {
   #current-page {
 	color:white
   }
-
 
