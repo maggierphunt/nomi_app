@@ -83,13 +83,17 @@ def landing_page():
 def results_page():
 
         form_data = request.form
+        
         return render_template("display_page.html", 
         FirstName = form_data["FirstName"],
         LastName = form_data["LastName"],
-        FirstNamePronounciation = form_data["FirstNamePronounciation"],
-        LastNamePronounciation = form_data["LastNamePronounciation"],
+        FirstNamePronunciation = form_data["FirstNamePronunciation"],
+        LastNamePronunciation = form_data["LastNamePronunciation"],
+        NickName = form_data["NickName"],
+        NickNamePronunciation = form_data["NickNamePronunciation"],
         Gender = form_data["selectGender"],
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],    
         FreeTextContentLastName = form_data["LastNameFreeTextContent"])
+
 #debug
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature.
