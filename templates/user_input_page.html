@@ -42,12 +42,13 @@
   
     
     <!-- form-->
-<div><br>
+<div><br>  <br>
   <p>Use the form below to submit information about your name.</p></div>
     <form form method="post" action="/results" onsubmit="return results_page()" id="user_details_form" enctype="multipart/form-data">
       <div class="form-group">
         <label for="selectGender">Example select</label>
         <select class="form-control" id="selectGender" name="selectGender">
+          <option></option>
           <option>she/her/hers</option>
           <option>he/him/his</option>
           <option>they/them/their</option>
@@ -58,10 +59,31 @@
         <input type="string" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
       </div>
       <div class="form-group" >
-        <label for="FirstNamePronounciation">First Name Pronunciation</label>
-        <input type="string" class="form-control" id="FirstNamePronounciation" name="FirstNamePronounciation" placeholder="e.g. mar-i-lin" required>
+        <label for="FirstNamePronunciation">First Name Pronunciation</label>
+        <input type="string" class="form-control" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
       </div>
-   
+      <div class="form-group">
+        <label for="NickName">Do you go by another name?</label>
+        <input type="string" class="form-control" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?" required>
+      </div>
+      <div class="form-group" >
+        <label for="NickNamePronunciation">Preferred Name Pronunciation</label>
+        <input type="string" class="form-control" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin" required>
+      </div>   
+      <div class="image-upload--container">
+        <input type="file" id="file-btn" class="custom-file-input" name="FirstNameImage">
+        <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
+        <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>
+        <!-- <p class="HTMLmessage">Message: {{ message_submit }}</p> -->
+       
+     
+ <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
+      
+      </div>
+      <div class="form-group">
+        <label for="FirstNameRecording">Upload a recording of you saying your first name here (optional)</label>
+        <input type="file" class="form-control-file" id="FirstNameRecording" name="FirstNameRecording">
+      </div>
       <div class="form-group">
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
         <textarea class="form-control" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
@@ -72,11 +94,11 @@
       </div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
-        <input type="string" class="form-control" id="LastNamePronounciation" name="LastNamePronounciation" placeholder="e.g. mon-ro">
+        <input type="string" class="form-control" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
       </div>
       <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">
-        <input type="file" id="file-btn" class="custom-file-input" name="image">
+        <input type="file" id="file-btn" class="custom-file-input" name="LastNameImage">
         <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
         <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>   
         <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
@@ -112,8 +134,10 @@
       <button type="submit" id="submit-button-for-form" class="btn btn-primary">Submit</button>
     </form>
   </div>
+
   
   <!-- Footer -->
+
 
   <footer class="footer-css w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
     <div class="footer-css footer-container">
