@@ -40,9 +40,28 @@ h5 {
 	top: 0;
 	left: 0px;
 	right: 0px;
+  position: absolute;
+  line-height: 40px
+}
 
-	position: absolute;
-	line-height: 40px;
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	display: inline-block;
+	height: 100px;
+}
+#footer-css {
+  background-color: salmon;
+  color: white;
+  height: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 }
 
 #content-wrap {
@@ -162,6 +181,8 @@ h2 {
 
 .social-media {
 	font-size: 2em;
+	color: #fff;
+	display: inline-block;
 }
 
 /* Share Button */
@@ -195,7 +216,7 @@ h2 {
 
 .dropdown-content2 {
 	display: flex;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 }
 .dropdown-content2 a {
 	padding: 0 12em;
@@ -305,7 +326,9 @@ input:checked + .slider:before {
 /*adapt to small screens */
 
 /*for small screens*/
-@media only screen and (max-width: 500px) {    
+
+@media only screen and (max-width: 500px) {
+
   #header {
       height: 100px;
       font-size: large;
