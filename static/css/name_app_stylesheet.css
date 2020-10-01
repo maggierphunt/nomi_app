@@ -344,3 +344,21 @@ input:checked + .slider:before {
 #current-page {
 	color: white;
 }
+
+ #replay {
+    visibility: hidden;
+    width: 39%;
+    float: right;
+    border: none;
+    color: white;
+    boxShadow: none;
+    background-color: salmon;
+}
+
+#recording {
+    border: 1px solid salmon;
+    color: salmon;
+    width: 100%;
+    box-shadow: none;
+    background-color: white;
+}
