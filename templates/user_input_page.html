@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <!-- scripts-->
-    <script src="../static/js/name_app_javascript.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
@@ -25,11 +23,11 @@
 <body class="noscrollbar">
     <div id="content-wrap">
     <!-- header and nav bar -->    
-    <div id="header"><h1 class="header">Nomi</h1>
+    <div class="header-container"><h1>Nomi</h1>
       <h7><i>get my name right</i></h7>
       <br>
       <nav>
-      <ul>
+      <ul class="navigation">
           <li class="current-page">
               <a href="/">Home</a>
           </li>
@@ -76,20 +74,33 @@
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
         <input type="string" class="form-control" id="LastNamePronounciation" name="LastNamePronounciation" placeholder="e.g. mon-ro">
       </div>
+      <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">
         <input type="file" id="file-btn" class="custom-file-input" name="image">
         <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
-        <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>
-        <!-- <p class="HTMLmessage">Message: {{ message_submit }}</p> -->
-       
-     
- <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
-      
+        <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>   
+        <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
+      </div> -->
+      <label for="ImageUpload">Upload Image</label>
+      <div class="custom-file image-upload--container">
+        <input type="file" class="custom-file-input" id="customFile" class="custom-file-input" name="image">
+        <label class="custom-file-label" for="customFile">Select image...</label>
       </div>
-      <div class="form-group">
+
+      <label for="ImageUpload">Upload a recording of you saying your last name here (optional)</label>
+      <div class="custom-file image-upload--container">
+        <input type="file" class="custom-file-input recording" id="customFile" class="custom-file-recording" name="image">
+        <label class="custom-file-label recording-label" for="customFile">Select recording...</label>
+      </div>
+
+
+
+      <!-- <div class="form-group">
         <label for="LastNameRecording">Upload a recording of you saying your last name here (optional)</label>
         <input type="file" class="form-control-file" id="LastNameRecording" name="LastNameRecording">
-      </div>
+      </div> -->
+
+
       <div class="form-group">
         <label for="LastNameFreeTextContent">Further information about your last name</label>
         <textarea class="form-control" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
@@ -101,44 +112,36 @@
       <button type="submit" id="submit-button-for-form" class="btn btn-primary">Submit</button>
     </form>
   </div>
-            <!-- Footer -->
+  
+  <!-- Footer -->
 
-  <footer class="footer-css w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
-
-
+  <footer class="footer-css w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
     <div class="footer-css footer-container">
-      
       <div class="dropdown">
-        <a onclick="myFunction()"  onmouseout="clearShare()" class="dropbtn"><img class="share-photo" src="/static/images/share.png" alt="share"></a>
+        <a onclick="myFunction()"  onmouseout="clearShare()" class="dropbtn"><i class="social-media fas fa-share-alt"></i></a>
         <div id="myDropdown" class="dropdown-social">
           <div class="dropdown-content2">
-            <a href="#"><img src="/static/images/insta.png" alt="instagram"></a>
-            <a href="#"><img src="/static/images/twitter.png" alt="twitter"></a>
-            <a href="#"><img src="/static/images/facebook.png" alt="facebook"></a>
+            <a href="#"><i class="social-media fab fa-instagram"></i></a>
+            <a href="#"><i class="social-media fab fa-twitter"></i></a>
+            <a href="#"><i class="social-media fab fa-facebook"></i></a>
           </div>
         </div>
       </div>
-    
-      <!-- <a href="#"><img src="/static/images/share.png" alt="share"></a> -->
 
       <div class="zoom-inout"> 
-        <a href="#"><img src="/static/images/minus.png" alt="zoom out"></a>
-        <a href="#"><img src="/static/images/plus.png" alt="zoom in"></a>
+        <a href="#"><i class="social-media fas fa-minus-circle"></i></a>
+        <a href="#"><i class="social-media fas fa-plus-circle"></i></a>
       </div>
       
       <div class="switch-container">
         <label class="switch-toggle" for="checkbox">
-          <input type="checkbox" id="checkbox" />
+          <input onclick="darkmodeToggle()" type="checkbox" id="checkbox" />
           <div class="slider round"></div>
         </label>
         <p>Enable Dark Mode</p>
       </div>
-
-   
+    </div>
 </footer>
-
-
-</div>
 
 </body>
 <script src="/static/js/name_app_javascript.js"></script>
