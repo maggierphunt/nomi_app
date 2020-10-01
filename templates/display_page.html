@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    
-    <!-- scripts-->
-    <script src="../static/js/name_app_javascript.js"></script>
 
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
@@ -43,14 +40,20 @@
 
 <br>
 {% if NickName %}
-    <div class="display-card"">
+    <div class="display-card">
 <div class="display-card-body">
 <i>I go by</i> <h2>{{NickName}}</h2>
 <h5>{{NickNamePronunciation}} 
-</h5></div></div>
+</h5>
+{% if NameRecording %}
+    <audio id="recordedAudio2">
+      <source src="{{NameRecording}}" type="audio/ogg">
+    </audio>
+    <img src="/static/images/play-btn.png" alt="Play Recording" onclick="playAudio()" width="15%" height="auto">
+    {% else %} {% endif %}</div></div>
 {% else %} {% endif %}
 
-<div class="display-card"">       <div class="display-card-body">
+<div class="display-card">       <div class="display-card-body">
   {% if NickName %}<i>and my name is</i> {% else %} {% endif %}
 <h2>{{FirstName}}
   {% if LastName %}  {{LastName}}</h2>{% else %} {% endif %}
@@ -70,7 +73,7 @@
   </div>
 </div>
 
-    <div class="display-card"">
+    <div class="display-card">
       {% if FirstNameImage %}<img src="..." class="card-image-top" alt="Image of how to write my First Name">
       <!-- <img src="data:image, {{ FirstNameImage }}"> --> {% else %} {% endif %}
       <div class="display-card-body">
@@ -81,7 +84,7 @@
 </p>      </div>
     </div>
     {% if LastName %}
-    <div class="display-card"">
+    <div class="display-card">
       {% if LastNameImage %} <img src="..." class="card-image-top" alt="Image of how to write my Last Name">
 <!-- <img src="data:image, {{ LastNameImage }}"> -->{% else %} {% endif %}
 
@@ -134,8 +137,8 @@
 </footer>
 
 
-</div>
+
 
 </body>
-
+<script src="/static/js/name_app_javascript.js"></script>
 </html>
