@@ -96,6 +96,8 @@ form {
 	align-items: left;
 	align-self: left;
 	text-align: left;
+	width: 70%;
+	margin: 0 auto;
 }
 
 h2 {
