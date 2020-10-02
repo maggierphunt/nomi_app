@@ -126,33 +126,39 @@
 
 
   <footer class="footer-css w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
-    <div class="footer-css footer-container">
-      <div class="dropdown">
-        <a onclick="myFunction()"  onmouseout="clearShare()" class="dropbtn"><i class="social-media fas fa-share-alt"></i></a>
-        <div id="myDropdown" class="dropdown-social">
-          <div class="dropdown-content2">
-            <a href="#"><i class="social-media fab fa-instagram"></i></a>
-            <a href="#"><i class="social-media fab fa-twitter"></i></a>
-            <a href="#"><i class="social-media fab fa-facebook"></i></a>
-          </div>
-        </div>
-      </div>
+    <div class="footer-container">
 
-      <div class="zoom-inout"> 
-        <a href="#"><i class="social-media fas fa-minus-circle"></i></a>
-        <a href="#"><i class="social-media fas fa-plus-circle"></i></a>
+      <div class="social-container">
+        <a><i class="social-icons fas fa-share-alt sharebtn"></i></a>
       </div>
+        <div class="footer-navbar">
+            <a href="#"><i class="social-icons fab fa-instagram"></i></a>
+            <a href="#"><i class="social-icons fab fa-twitter"></i></a>
+            <a href="#"><i class="social-icons fab fa-facebook"></i></a>
+        </div>
+     
+    <!-- <button class="btn btn-primary btn-social" id="btn-share" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> -->
+   
       
-      <div class="switch-container">
-        <label class="switch-toggle" for="checkbox">
-          <input onclick="darkmodeToggle()" type="checkbox" id="checkbox" />
-          <div class="slider round"></div>
-        </label>
-        <p>Enable Dark Mode</p>
-      </div>
+        <div class="zoom-inout"> 
+          <a href="#"><i class="social-icons fas fa-minus-circle"></i></a>
+          <a href="#"><i class="social-icons fas fa-plus-circle"></i></a>
+        </div>
+      
+        <div class="switch-container">
+          <label class="switch-toggle" for="checkbox">
+            <input onclick="darkmodeToggle()" type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+          <p>Enable Dark Mode</p>
+        </div>
+    
+
     </div>
 </footer>
 
 </body>
+
 <script src="/static/js/name_app_javascript.js"></script>
+
 </html>
