@@ -1,20 +1,28 @@
-const dropdownContainer = document.querySelector('.dropdown');
+const dropdownContainer = document.querySelector('#myDropdown');
 const zoomInOut = document.querySelector('.zoom-inout');
 const switchContainer = document.querySelector('.switch-container');
-const dropdownSocial = document.querySelector('.dropdown-social');
 
-function myFunction() {
-	dropdownContainer.classList.toggle('show');
-	zoomInOut.style.display = 'none';
-	switchContainer.style.display = 'none';
-	dropdownSocial.style.display = 'inline';
-}
+// const myFunction = () => {
+// 	dropdownContainer.classList.toggle('show');
+// 	zoomInOut.style.display = 'none';
+// 	switchContainer.style.display = 'none';
+// 	dropdownSocial.style.display = 'inline';
+// };
 
-function clearShare() {
-	zoomInOut.style.display = 'inline';
-	switchContainer.style.display = 'inline';
-	dropdownSocial.style.display = 'none';
-}
+// function clearShare() {
+// 	zoomInOut.style.display = 'inline';
+// 	switchContainer.style.display = 'inline';
+// 	dropdownSocial.style.display = 'none';
+// }
+
+// const shareBtn = document.querySelector('.sharebtn');
+
+// shareBtn.addEventListener('click', function() {
+// 	dropdownContainer.classList.toggle('show');
+// 	zoomInOut.style.display = 'none';
+// 	switchContainer.style.display = 'none';
+// 	dropdownSocial.style.display = 'inline';
+// });
 
 // Dark Mode Toggle
 
@@ -46,3 +54,23 @@ customRecording.addEventListener('change', function() {
 	const recordingFileName = customRecording.value.split(/[\\\/]/).pop();
 	customRecordingLabel.innerHTML = recordingFileName;
 });
+
+// Show/hide social icons
+
+document.querySelector('.sharebtn').addEventListener('click', function() {
+	const footerNav = document.querySelector('.footer-navbar');
+
+	showSocials = !showSocials;
+
+	if (showSocials === true) {
+		footerNav.style.display = 'inline-flex';
+		zoomInOut.style.display = 'none';
+		switchContainer.style.display = 'none';
+	} else {
+		footerNav.style.display = 'none';
+		zoomInOut.style.display = 'inline';
+		switchContainer.style.display = 'inline';
+	}
+});
+
+let showSocials = false;
