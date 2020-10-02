@@ -95,13 +95,13 @@
         <label class="custom-file-label" for="customFile">Select image...</label>
       </div>
 
-      <label for="ImageUpload">Upload a recording of you saying your last name here (optional)</label>
+      <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
       <div class="custom-file image-upload--container">
-        <input type="file" class="custom-file-input recording" id="customFile" class="custom-file-recording" name="image">
-        <label class="custom-file-label recording-label" for="customFile">Select recording...</label>
+        <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
+        <input id="replay" class="btn btn-secondary" type="button" value="PLAY" onclick="play()">
+        <audio id="recordedAudio" src=""></audio>
+        <input type="hidden" class="form-control" id="NameRecording" name="NameRecording" value="">
       </div>
-
-
 
       <!-- <div class="form-group">
         <label for="LastNameRecording">Upload a recording of you saying your last name here (optional)</label>

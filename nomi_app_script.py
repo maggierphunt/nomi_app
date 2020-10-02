@@ -88,6 +88,7 @@ def results_page():
         FirstName = form_data["FirstName"],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
+        NameRecording=form_data["NameRecording"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
         NickName = form_data["NickName"],
         NickNamePronunciation = form_data["NickNamePronunciation"],
