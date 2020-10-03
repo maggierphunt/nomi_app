@@ -1,25 +1,24 @@
 from flask import Flask, render_template, redirect, request, Response
 import os
 from jinja2 import Template
-from flask_wtf import FlaskForm
-from flask_wtf.file import FileField, FileAllowed, FileRequired
 import io
 import base64
 
 app = Flask("nomi_app") #making an app
+
+# Specifies a path to save images and allows image types
+
+app.config['IMAGE_UPLOADS'] =  "/Users/Mio/Desktop/nomi_app/static/images/uploads"
+app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPEG", "JPG", "GIF"]
+app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024 
+
+
 #About page
 @app.route("/about")    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 def about_page():
         return render_template("about_page.html") #runs the about page
 
   
-# Specifies a path to save images and allows image types
-
-app.config["IMAGE_UPLOADS"] = "/Users/Mio/Desktop/nomi_app/static/images/uploads"
-app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPEG", "JPG", "GIF"]
-app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024 
-
-
 
 # Checks if extension is allowed
 def allowed_image(filename):
@@ -53,7 +52,7 @@ def landing_page():
                                 print("That image extension is not allowed")
                                 return redirect(request.url)
 
-                        image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+                        image.save(os.path.join(app.config['IMAGE_UPLOADS'], image.filename))
 
                         print('Image saved!')
                         
@@ -97,9 +96,10 @@ def results_page():
         NameRecording=form_data["NameRecording"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
-        FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],    
+        FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],   
         FreeTextContentLastName = form_data["LastNameFreeTextContent"],
         LastNameImage = form_data["LastNameImage"])
+
 
 @app.route("/widget", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 def widget_page():
