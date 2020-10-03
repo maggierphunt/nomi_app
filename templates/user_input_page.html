@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <!-- scripts -->
   
-   
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,9 +61,12 @@
       </div>
       <div class="form-group"><label for="FirstNameImage">Upload an image of how to write your first name (optional)</label>
         <div class="custom-file image-upload--container">
-          <input type="file" id="FirstNameImage" class="custom-file-input" name="FirstNameImage">
+          <input type="file" onchange='validateFirstName(this)' id="FirstNameImage" class="custom-file-input" name="FirstNameImage">
           <label id="FirstNameLabel" class="custom-file-label" for="FirstNameImage">Select image...</label>
         </div></div>
+        <div class="alert alert-primary first-name-error"></div>
+
+        
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
         <input type="string" class="form-control" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
@@ -86,11 +87,18 @@
         <label for="LastName">Last Name</label>
         <input type="string" class="form-control" id="LastName" name="LastName" placeholder="Enter your last name here">
       </div>
-      <div class="form-group"><label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
+
+
+      <div class="form-group">
+        <label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
       <div class="custom-file image-upload--container">
-        <input type="file" id="LastNameImage" class="custom-file-input" name="LastNameImage">
+        <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input" name="LastNameImage">
         <label id="LastNameLabel"  class="custom-file-label" for="LastNameImage">Select image...</label>
-      </div></div>
+        
+    </div></div>
+    <div class="alert alert-primary last-name-error"></div>
+
+
       <div class="form-group">
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
         <input type="string" class="form-control" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
@@ -99,6 +107,7 @@
         <label for="LastNameFreeTextContent">Further information about your last name</label>
         <textarea class="form-control" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>
+  
       <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">
         <input type="file" id="file-btn" class="custom-file-input" name="LastNameImage">
