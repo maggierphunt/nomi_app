@@ -96,6 +96,10 @@ form {
 	margin: 0 auto;
 }
 
+textarea:focus,
+input:focus {
+	outline: none;
+}
 h2 {
 	color: salmon;
 }

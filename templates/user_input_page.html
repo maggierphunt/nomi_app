@@ -57,11 +57,11 @@
       </div>
       <div class="form-group">
         <label for="FirstName">First Name</label>
-        <input type="string" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
+        <input type="string" class="form-control shadow-none" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
       </div>
       <div class="form-group"><label for="FirstNameImage">Upload an image of how to write your first name (optional)</label>
         <div class="custom-file image-upload--container">
-          <input type="file" onchange='validateFirstName(this)' id="FirstNameImage" class="custom-file-input" name="FirstNameImage">
+          <input type="file" onchange='validateFirstName(this)' id="FirstNameImage" class="custom-file-input shadow-none" name="FirstNameImage">
           <label id="FirstNameLabel" class="custom-file-label" for="FirstNameImage">Select image...</label>
         </div></div>
         <div class="alert alert-primary first-name-error"></div>
@@ -69,30 +69,30 @@
         
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
-        <input type="string" class="form-control" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
+        <input type="string" class="form-control shadow-none" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
       </div>
       <div class="form-group">
         <label for="NickName">Do you go by another name?</label>
-        <input type="string" class="form-control" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?">
+        <input type="string" class="form-control shadow-none" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?">
       </div>
       <div class="form-group" >
         <label for="NickNamePronunciation">Preferred Name Pronunciation</label>
-        <input type="string" class="form-control" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin">
+        <input type="string" class="form-control shadow-none" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin">
       </div>   
       <div class="form-group">
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
-        <textarea class="form-control" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
+        <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
       </div>
       <div class="form-group">
         <label for="LastName">Last Name</label>
-        <input type="string" class="form-control" id="LastName" name="LastName" placeholder="Enter your last name here">
+        <input type="string" class="form-control shadow-none" id="LastName" name="LastName" placeholder="Enter your last name here">
       </div>
 
 
       <div class="form-group">
         <label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
       <div class="custom-file image-upload--container">
-        <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input" name="LastNameImage">
+        <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input shadow-none" name="LastNameImage">
         <label id="LastNameLabel"  class="custom-file-label" for="LastNameImage">Select image...</label>
         
     </div></div>
@@ -101,11 +101,11 @@
 
       <div class="form-group">
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
-        <input type="string" class="form-control" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
+        <input type="string" class="form-control shadow-none" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
       </div>
       <div class="form-group">
         <label for="LastNameFreeTextContent">Further information about your last name</label>
-        <textarea class="form-control" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
+        <textarea class="form-control shadow-none" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>
   
       <!-- <label for="ImageUpload">Upload Image</label>
@@ -119,9 +119,9 @@
       <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
       <div class="custom-file image-upload--container">
         <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
-        <input id="replay" class="btn btn-secondary" type="button" value="PLAY" onclick="play()">
+        <input id="replay" class="btn btn-secondary shadow-none" type="button" value="PLAY" onclick="play()">
         <audio id="recordedAudio" src=""></audio>
-        <input type="hidden" class="form-control" id="NameRecording" name="NameRecording" value="">
+        <input type="hidden" class="form-control shadow-none" id="NameRecording" name="NameRecording" value="">
       </div></div>
 
       <!-- <div class="form-group">
