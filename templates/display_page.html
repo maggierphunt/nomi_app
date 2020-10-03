@@ -46,12 +46,7 @@
 <i>I go by</i> <h2>{{NickName}}</h2>
 <h5>{{NickNamePronunciation}} 
 </h5>
-{% if NameRecording %}
-    <audio id="recordedAudio2">
-      <source src="{{NameRecording}}" type="audio/ogg">
-    </audio>
-    <img src="/static/images/play-btn.png" alt="Play Recording" onclick="playAudio()" width="15%" height="auto">
-    {% else %} {% endif %}</div></div>
+
 {% else %} {% endif %}
 
 <div class="display-card">       <div class="display-card-body">
@@ -70,7 +65,12 @@
 
 {% if Gender %}<p>{{Gender}}</p>{% else %}
 {% endif %}
-
+{% if NameRecording %}
+    <audio id="NameRecording">
+      <source src="{{NameRecording}}" type="audio/ogg">
+    </audio>
+    <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="playAudio()" width="15%" height="auto">
+    {% else %} {% endif %}</div></div>
   </div>
 </div>
 

@@ -87,16 +87,18 @@ def results_page():
         form_data = request.form
         
         return render_template("display_page.html", 
+        NickName = form_data["NickName"],
+        NickNamePronunciation = form_data["NickNamePronunciation"],
         FirstName = form_data["FirstName"],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
+        FirstNameImage = form_data["FirstNameImage"],
         NameRecording=form_data["NameRecording"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
-        NickName = form_data["NickName"],
-        NickNamePronunciation = form_data["NickNamePronunciation"],
         Gender = form_data["selectGender"],
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],    
-        FreeTextContentLastName = form_data["LastNameFreeTextContent"])
+        FreeTextContentLastName = form_data["LastNameFreeTextContent"],
+        LastNameImage = form_data["LastNameImage"])
 
 #debug
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature.
