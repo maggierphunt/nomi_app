@@ -109,9 +109,10 @@ h2 {
 	overflow: hidden;
 }
 
-#btn-upload {
-	margin: 1em 0;
-	background-color: salmon;
+.first-name-error,
+.last-name-error {
+	display: none;
+	font-size: 1em;
 }
 
 /*hide scrollbar*/
