@@ -41,13 +41,20 @@ function darkmodeToggle() {
 
 // Image Upload
 
-// const customFileInput = document.querySelector('.custom-file-input');
-// const customFileLabel = document.querySelector('.custom-file-label');
+const customFileInput = document.querySelector('#FirstNameImage');
+const customFileLabel = document.querySelector('#FirstNameLabel');
+const lastNameInput = document.querySelector('#LastNameImage');
+const lastNameLabel = document.querySelector('#LastNameLabel');
 
-// customFileInput.addEventListener('change', function() {
-// 	const fileName = customFileInput.value.split(/[\\\/]/).pop();
-// 	customFileLabel.innerHTML = fileName;
-// });
+customFileInput.addEventListener('change', function() {
+	const fileName = customFileInput.value.split(/[\\\/]/).pop();
+	customFileLabel.innerHTML = fileName;
+});
+
+lastNameInput.addEventListener('change', function() {
+	const fileName = lastNameInput.value.split(/[\\\/]/).pop();
+	lastNameLabel.innerHTML = fileName;
+});
 
 // Show/hide social icons
 
