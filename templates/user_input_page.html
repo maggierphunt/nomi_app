@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-
+    <!-- scripts -->
+    <script src="/static/js/name_app_javascript.js"></script>
+   
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,17 +61,22 @@
         <label for="FirstName">First Name</label>
         <input type="string" class="form-control" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
       </div>
+      <div class="form-group"><label for="FirstNameImage">Upload an image of how to write your first name (optional)</label>
+        <div class="custom-file image-upload--container">
+          <input type="file" id="FirstNameImage" class="custom-file-input" name="FirstNameImage">
+          <label class="custom-file-label" for="FirstNameImage">Select image...</label>
+        </div></div>
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
         <input type="string" class="form-control" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
       </div>
       <div class="form-group">
         <label for="NickName">Do you go by another name?</label>
-        <input type="string" class="form-control" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?" required>
+        <input type="string" class="form-control" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?">
       </div>
       <div class="form-group" >
         <label for="NickNamePronunciation">Preferred Name Pronunciation</label>
-        <input type="string" class="form-control" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin" required>
+        <input type="string" class="form-control" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin">
       </div>   
       <div class="form-group">
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
@@ -79,9 +86,18 @@
         <label for="LastName">Last Name</label>
         <input type="string" class="form-control" id="LastName" name="LastName" placeholder="Enter your last name here">
       </div>
+      <div class="form-group"><label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
+      <div class="custom-file image-upload--container">
+        <input type="file" id="LastNameImage" class="custom-file-input" name="LastNameImage">
+        <label class="custom-file-label" for="LastNameImage">Select image...</label>
+      </div></div>
       <div class="form-group">
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
         <input type="string" class="form-control" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
+      </div>
+      <div class="form-group">
+        <label for="LastNameFreeTextContent">Further information about your last name</label>
+        <textarea class="form-control" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>
       <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">
@@ -90,30 +106,20 @@
         <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>   
         <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
       </div> -->
-      <label for="ImageUpload">Upload Image</label>
-      <div class="custom-file image-upload--container">
-        <input type="file" id="customFile" class="custom-file-input" name="image">
-        <label class="custom-file-label" for="customFile">Select image...</label>
-      </div>
-
+      <div class="form-group">
       <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
       <div class="custom-file image-upload--container">
         <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
         <input id="replay" class="btn btn-secondary" type="button" value="PLAY" onclick="play()">
         <audio id="recordedAudio" src=""></audio>
         <input type="hidden" class="form-control" id="NameRecording" name="NameRecording" value="">
-      </div>
+      </div></div>
 
       <!-- <div class="form-group">
         <label for="LastNameRecording">Upload a recording of you saying your last name here (optional)</label>
         <input type="file" class="form-control-file" id="LastNameRecording" name="LastNameRecording">
       </div> -->
 
-
-      <div class="form-group">
-        <label for="LastNameFreeTextContent">Further information about your last name</label>
-        <textarea class="form-control" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
-      </div>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="ConsentUnderStand" required>
         <label class="form-check-label" for="ConsentUnderStand" name="ConsentUnderStand" required>I understand that my data will be stored locally.</label>
@@ -159,7 +165,5 @@
 </footer>
 
 </body>
-
-<script src="/static/js/name_app_javascript.js"></script>
 
 </html>

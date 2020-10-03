@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- title: CHANGE ME -->
+    <title>Get My Name Right</title>
+        
+    <!-- stylesheets -->    
+    <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+    <!-- meta -->
+    <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="An app to promote and celebrate diversity: share how your name shoupd be pronounced, its history and origins.">
+    <meta name="keywords" content="python,HTML,CSS,javascript,name,API,etymology,heritage,origins,diversity,inclusion">
+    
+</head>
+<body>
+  <div id="display-card">
+
+<br>
+<div class="display-card-body">
+
+<h2>{{FirstName}}
+  {% if LastName %}  {{LastName}}</h2>{% else %} {% endif %}
+
+<h5>
+ 
+  {{FirstNamePronunciation}} 
+  
+  {% if LastName %} 
+  - {{LastNamePronunciation}}
+{% else %} {% endif %}
+</h5>
+
+{% if Gender %}<p>{{Gender}}</p>{% else %}
+{% endif %}
+{% if NameRecording %}
+    <audio id="NameRecording">
+      <source src="{{NameRecording}}" type="audio/ogg">
+    </audio>
+    <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="playAudio()" width="15%" height="auto">
+    {% else %} {% endif %}</div></div>
+  </div>
+</div>
+
+    </div>
+
+</div>
+</div>
+
+</body>
+
+</html>
