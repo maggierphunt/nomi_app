@@ -56,6 +56,34 @@ lastNameInput.addEventListener('change', function() {
 	lastNameLabel.innerHTML = fileName;
 });
 
+// Image Upload - Error Messages
+
+const firstNameErrorMessage = document.querySelector('.first-name-error');
+const lastNameErrorMessage = document.querySelector('.last-name-error');
+
+function validateFirstName(file) {
+	var fileSize = file.files[0].size / 1024 / 1024; // in MB
+	if (fileSize > 2) {
+		// alert('File size exceeds 2 MB');
+		firstNameErrorMessage.style.display = 'block';
+		firstNameErrorMessage.innerHTML =
+			'File size exceeds 2 MB please upload a smaller file';
+	} else {
+		firstNameErrorMessage.style.display = 'none';
+	}
+}
+
+function validateLastName(file) {
+	var fileSize = file.files[0].size / 1024 / 1024; // in MB
+	if (fileSize > 2) {
+		// alert('File size exceeds 2 MB');
+		lastNameErrorMessage.style.display = 'block';
+		lastNameErrorMessage.innerHTML = 'File size exceeds 2 MB';
+	} else {
+		lastNameErrorMessage.style.display = 'none';
+	}
+}
+
 // Show/hide social icons
 
 const zoomInOut = document.querySelector('.zoom-inout');
