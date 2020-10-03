@@ -112,7 +112,7 @@ def widget_page():
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
         NameRecording=form_data["NameRecording"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
-        Gender = form_data["selectGender"],
+        Gender = form_data["selectGender"],)
 
 #debug
-app.run(debug=True) #runs the app. the debug part - unlocks debugging feature.
+app.run(debug=True) #runs the app. the debug part - unlocks debugging feature
