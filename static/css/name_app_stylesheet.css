@@ -197,6 +197,7 @@ h2 {
 	height: 34px;
 	position: relative;
 	width: 60px;
+	margin: 0 0 0.1em;
 }
 
 .switch-toggle input {
@@ -328,20 +329,20 @@ input:checked + .slider:before {
 	color: white;
 }
 
- #replay {
-    visibility: hidden;
-    width: 39%;
-    float: right;
-    border: none;
-    color: white;
-    boxShadow: none;
-    background-color: salmon;
+#replay {
+	visibility: hidden;
+	width: 39%;
+	float: right;
+	border: none;
+	color: white;
+	boxShadow: none;
+	background-color: salmon;
 }
 
 #recording {
-    border: 1px solid salmon;
-    color: salmon;
-    width: 100%;
-    box-shadow: none;
-    background-color: white;
+	border: 1px solid salmon;
+	color: salmon;
+	width: 100%;
+	box-shadow: none;
+	background-color: white;
 }
