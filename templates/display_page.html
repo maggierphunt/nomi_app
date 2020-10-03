@@ -24,26 +24,32 @@
     
 </head>
 <body class="noscrollbar">
-  <div id="content-wrap">
+
   <!-- header and nav bar -->    
-  <div class="header-container"><h1>Nomi</h1>
+
+<header class="header-container"><h1>Nomi</h1>
     <h7><i>get my name right</i></h7>
     <br>
     <nav>
     <ul class="navigation">
-        <li class="current-page">
-            <a href="/">Home</a>
-        </li>
-        <li>
-            <a href="/about">About</a>
-        </li>
+      <li class="current-page">
+      <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
     </ul>
     </nav>
-  </div>
-    <!-- end of header and nav bar --> 
+</header>
 
+<!-- end of header and nav bar --> 
+
+<!-- Main Results Page --> 
+
+<section id="content-wrap">
 <br>
 {% if NickName %}
+
     <div class="display-card">
 <div class="display-card-body">
 <i>I go by</i> <h2>{{NickName}}</h2>
@@ -63,8 +69,10 @@
   
   {% if LastName %} 
   - {{LastNamePronunciation}}
+
+
 {% else %} {% endif %}
-</h5>
+
 
 {% if Gender %}<p>{{Gender}}</p>{% else %}
 {% endif %}
@@ -99,12 +107,30 @@
 {{FreeTextContentLastName}}
 </p></div>
 
-</div>
 
+
+</div>
+{% if LastName %}
+<div class="display-card">
+  {% if LastNameImage %}<img src="..." class="card-image-top" alt="Image of how to write my Last Name">
+  <!-- <img src="data:image, {{ LastNameImage }}"> -->{% else %} {% endif %}
+  <div class="display-card-body">
+    <h5>{{LastName}}</h5>
+    <i>Origin and meaning</i>
+    <br>
+    {{FreeTextContentLastName}}
+    </p>
+  </div>
+</div>
 {% else %} {% endif %}
+<div class="download-container">
+  <a><i class="fas fa-download download-button"></i></a>
 </div>
-</div>
-             <!-- Footer -->
+</section>
+
+
+
+<!--------- Footer -------->
 <footer class="footer-css w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
   <div class="footer-container">
     <div class="social-container">
