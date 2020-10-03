@@ -35,14 +35,13 @@ def allowed_image(filename):
 #Input page
 @app.route("/", methods=["GET", "POST"])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 
-
 def landing_page():
 
         if request.method == "POST":
 
                 if request.files:
 
-                        image = request.files["image"]
+                        image = request.files["FirstNameImage"]
 
                         if image.filename == "":
                                 print("Image must have a filename")
@@ -99,6 +98,19 @@ def results_page():
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],    
         FreeTextContentLastName = form_data["LastNameFreeTextContent"],
         LastNameImage = form_data["LastNameImage"])
+
+@app.route("/widget", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
+def widget_page():
+
+        form_data = request.form
+        
+        return render_template("widget_page.html", 
+        FirstName = form_data["FirstName"],
+        LastName = form_data["LastName"],
+        FirstNamePronunciation = form_data["FirstNamePronunciation"],
+        NameRecording=form_data["NameRecording"],
+        LastNamePronunciation = form_data["LastNamePronunciation"],
+        Gender = form_data["selectGender"],
 
 #debug
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature.
