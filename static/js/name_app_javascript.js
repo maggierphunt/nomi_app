@@ -41,13 +41,13 @@ function darkmodeToggle() {
 
 // Image Upload
 
-const customFileInput = document.querySelector('.custom-file-input');
-const customFileLabel = document.querySelector('.custom-file-label');
+// const customFileInput = document.querySelector('.custom-file-input');
+// const customFileLabel = document.querySelector('.custom-file-label');
 
-customFileInput.addEventListener('change', function() {
-	const fileName = customFileInput.value.split(/[\\\/]/).pop();
-	customFileLabel.innerHTML = fileName;
-});
+// customFileInput.addEventListener('change', function() {
+// 	const fileName = customFileInput.value.split(/[\\\/]/).pop();
+// 	customFileLabel.innerHTML = fileName;
+// });
 
 // Show/hide social icons
 
@@ -72,27 +72,7 @@ document.querySelector('.sharebtn').addEventListener('click', function() {
 
 let showSocials = false;
 
-// Add the following code if you want the name of the file appear on select
-// $('.custom-file-input').on('change', function() {
-// 	var fileName = $(this).val().split('\\').pop();
-// 	$(this).siblings('.custom-file-label').addClass('selected').html(fileName);
-// });
-
-//const customFileInput = document.querySelector('.custom-file-input');
-//const customFileLabel = document.querySelector('.custom-file-label');
-//
-//const customRecording = document.querySelector('.recording');
-//const customRecordingLabel = document.querySelector('.recording-label');
-//
-//customFileInput.addEventListener('change', function() {
-//	const fileName = customFileInput.value.split(/[\\\/]/).pop();
-//	customFileLabel.innerHTML = fileName;
-//});
-//
-//customRecording.addEventListener('change', function() {
-//	const recordingFileName = customRecording.value.split(/[\\\/]/).pop();
-//	customRecordingLabel.innerHTML = recordingFileName;
-//});
+// Recording
 
 navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
 	handlerFunction(stream);

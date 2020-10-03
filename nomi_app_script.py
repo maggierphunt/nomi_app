@@ -1,7 +1,8 @@
 from flask import Flask, render_template, redirect, request, Response
 import os
 from jinja2 import Template
-
+from flask_wtf import FlaskForm
+from flask_wtf.file import FileField, FileAllowed, FileRequired
 
 app = Flask("nomi_app") #making an app
 #About page
@@ -34,6 +35,7 @@ def allowed_image(filename):
 #Input page
 @app.route("/", methods=["GET", "POST"])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 
+
 def landing_page():
 
         if request.method == "POST":
@@ -45,7 +47,7 @@ def landing_page():
                         if image.filename == "":
                                 print("Image must have a filename")
                                 return redirect(request.url)
-
+                
                         if not allowed_image(image.filename):
                                 print("That image extension is not allowed")
                                 return redirect(request.url)
