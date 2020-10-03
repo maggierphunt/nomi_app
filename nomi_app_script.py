@@ -3,6 +3,8 @@ import os
 from jinja2 import Template
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileRequired
+import io
+import base64
 
 app = Flask("nomi_app") #making an app
 #About page
