@@ -231,11 +231,15 @@ h2 {
 	cursor: pointer;
 }
 
+.social-icons a {
+	text-decoration: none;
+}
+
 .social-icons:hover {
-	opacity: 0.7;
-	color: #2574a9;
+	opacity: 0.8;
+	color: #fff;
 	transform: scale(1.2);
-	transition: ease-out 100ms;
+	transition: ease-out 200ms;
 }
 
 .switch-container {
