@@ -77,42 +77,30 @@ def landing_page():
         
         return render_template("user_input_page.html") #runs the landing page
 
-
-     
-
 #Results
-@app.route("/results", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
+@app.route("/results", methods=['POST'])      #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
 def results_page():
 
         form_data = request.form
-        
-        return render_template("display_page.html", 
-        NickName = form_data["NickName"],
+
+        return render_template("display_page.html",
+        NickName = form_data.get("NickName"),
         NickNamePronunciation = form_data["NickNamePronunciation"],
-        FirstName = form_data["FirstName"],
+        FirstName = form_data['FirstName'],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
-        FirstNameImage = form_data["FirstNameImage"],
+        # FirstNameImage = form_data["FirstNameImage"],
         NameRecording=form_data["NameRecording"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
-        FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],   
-        FreeTextContentLastName = form_data["LastNameFreeTextContent"],
-        LastNameImage = form_data["LastNameImage"])
+        FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],
+        FreeTextContentLastName = form_data["LastNameFreeTextContent"])
+        # LastNameImage = form_data["LastNameImage"])
 
-
-@app.route("/widget", methods=['POST'])    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
+@app.route("/widget",methods=["GET"])
 def widget_page():
-
-        form_data = request.form
-        
-        return render_template("widget_page.html", 
-        FirstName = form_data["FirstName"],
-        LastName = form_data["LastName"],
-        FirstNamePronunciation = form_data["FirstNamePronunciation"],
-        NameRecording=form_data["NameRecording"],
-        LastNamePronunciation = form_data["LastNamePronunciation"],
-        Gender = form_data["selectGender"],)
+        return render_template("widget_page.html",
+        FirstName = form_data['FirstName'])
 
 #debug
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature
