@@ -21,39 +21,8 @@
     
 </head>
 <body>
-  <div id="display-card">
-
-<br>
-<div class="display-card-body">
-
-<h2>{{FirstName}}
-  {% if LastName %}  {{LastName}}</h2>{% else %} {% endif %}
-
-<h5>
- 
-  {{FirstNamePronunciation}} 
-  
-  {% if LastName %} 
-  - {{LastNamePronunciation}}
-{% else %} {% endif %}
-</h5>
-
-{% if Gender %}<p>{{Gender}}</p>{% else %}
-{% endif %}
-{% if NameRecording %}
-    <audio id="NameRecording">
-      <source src="{{NameRecording}}" type="audio/ogg">
-    </audio>
-    <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="playAudio()" width="15%" height="auto">
-    {% else %} {% endif %}</div></div>
-  </div>
-</div>
-
-    </div>
-
-</div>
-</div>
-
+<h1>Teo</h1>
+<h1>{{FirstName}}</h1>
 </body>
 
 </html>
