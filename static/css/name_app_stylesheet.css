@@ -160,10 +160,17 @@ select,
 	color: black;
 }
 
-#submit-button-for-form {
+#submit-btn {
+	height: 50px;
+	border-radius: 5px;
 	border: 2px solid #007a7c;
 	background-color: #007a7c;
 	color: #fff;
+	padding: 0 1em;
+}
+
+#submit-btn:hover {
+	opacity: 0.8;
 }
 /* Image Upload */
 
