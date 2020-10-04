@@ -197,7 +197,8 @@ select,
 	width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
-	z-index: -1;
+	z-index: 0;
+
 }
 
 .first-name-error,
@@ -259,7 +260,7 @@ select,
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	z-index: 0;
+	z-index: 1;
 }
 
 .footer-navbar {
@@ -432,7 +433,7 @@ input:checked + .slider:before {
 
 	#content-wrap {
 		padding-top: 120px; /*header height */
-		padding-bottom: 20px; /* Footer height */
+		padding-bottom: 120px; /* Footer height */
 		padding-left: 150px;
 		padding-right: 150px;
 	}
@@ -453,6 +454,6 @@ input:checked + .slider:before {
 	float: right;
 	border: none;
 	color: white;
-	boxShadow: none;
+	box-shadow: none;
 	background-color:  #007a7c;
 }

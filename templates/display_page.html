@@ -64,8 +64,8 @@
             {% else %} {% endif %}
 
             <h2>{{FirstName}}
-
-            {% if LastName %}
+            
+              {% if LastName %}
 
                 {{LastName}}</h2>
 
@@ -95,7 +95,7 @@
                     <source src="{{NameRecording}}" type="audio/ogg">
                 </audio>
           
-                <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="getElementById('recordedAudio2').play()" width="15%" height="auto">
+                <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="getElementById('recordedAudio2').play()" width="5%" height="auto">
 
                 {% else %} {% endif %}
 
@@ -106,8 +106,10 @@
 
         {% if FirstNameImage %}
 
-        <img src ="{{ FirstNameImage }}" class="card-image-top" alt="Image of how to write my First Name">
-
+        
+        <img id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
+          <source src="{{ FirstNameImage }}" type="image">
+          </img>
         {% else %} {% endif %}
 
         <div class="display-card-body">
@@ -213,4 +215,5 @@
 </body>
 
 <script src="/static/js/name_app_display.js"></script>
+<script src="/static/js/name_app_javascript.js"></script>
 </html>
