@@ -1,6 +1,12 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 body {
-	background-color: whitesmoke;
+	background-color: #f7f7f7;
 	align-content: center;
+	color: #ffffff;
 }
 
 /* h1 {
@@ -19,20 +25,14 @@ h5 {
 	color: lightslategray;
 }
 
-* {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
 .header-container {
 	width: 100%;
-	background-color: salmon;
+	background-color: #007a7c;
 	color: white;
 	font-size: larger;
 	text-align: center;
 	border: 0px;
-	padding-top: 20px;
+	padding: 20px 0;
 	align-self: center;
 	top: 0;
 	left: 0px;
@@ -47,7 +47,7 @@ h5 {
 }
 
 /*bullets and links for header */
-ul {
+/* ul {
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -61,29 +61,68 @@ li {
 	padding: 0;
 	display: inline-block;
 	text-align: center;
+} */
+
+.navigation {
+	display: flex;
+	justify-content: center;
 }
 
-.navigation li a {
+.nav-item {
+	list-style: none;
+}
+
+.nav-item + .nav-item {
+	padding-left: 2em;
+}
+
+.nav-link {
+	text-decoration: none;
+	position: relative;
+}
+
+.nav-link:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 9px;
+	left: 0;
+	background-color: #fff;
+	visibility: hidden;
+	transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+	color: #fff;
+}
+
+.nav-link:hover::before {
+	visibility: visible;
+	width: 100%;
+}
+
+/* .navigation li a {
 	display: inline-block;
 	position: relative;
 	display: block;
-}
+} */
 
-.navigation li a:link {
+/* .navigation li a:link {
 	text-decoration: none;
 }
 
 .navigation li a:visited {
 	text-decoration: none;
-}
+} */
 
-.navigation li a:hover {
+/* .navigation li a:hover {
 	color: slategrey;
-}
+} */
 
-.navigation li a:active {
+/* .navigation li a:active {
 	text-decoration: none;
-}
+} */
 
 /* Form */
 
@@ -164,7 +203,7 @@ h2 {
 	align-items: center;
 	padding: 0.5em;
 	height: 100%;
-	background-color: salmon;
+	background-color: #007a7c;
 	color: white;
 	height: 6.5rem;
 	width: 100%;
@@ -245,7 +284,7 @@ h2 {
 }
 
 .slider:before {
-	background-color: rgb(240, 138, 138);
+	background-color: #007a7c;
 	bottom: 4px;
 	content: "";
 	height: 26px;
@@ -352,10 +391,6 @@ input:checked + .slider:before {
 		font-size: smaller;
 		display: inline-block;
 	}
-}
-
-#current-page {
-	color: white;
 }
 
 #replay {
