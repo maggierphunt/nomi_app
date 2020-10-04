@@ -78,7 +78,8 @@ function validateLastName(file) {
 	if (fileSize > 2) {
 		// alert('File size exceeds 2 MB');
 		lastNameErrorMessage.style.display = 'block';
-		lastNameErrorMessage.innerHTML = 'File size exceeds 2 MB';
+		lastNameErrorMessage.innerHTML =
+			'File size exceeds 2 MB please upload a smaller file';
 	} else {
 		lastNameErrorMessage.style.display = 'none';
 	}

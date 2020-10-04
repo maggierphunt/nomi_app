@@ -57,6 +57,7 @@
         <input type="string" class="form-control shadow-none" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
       </div>
       <div class="form-group"><label for="FirstNameImage">Upload an image of how to write your first name (optional)</label>
+        <label for="">MAX UP TO 2MB</label>
         <div class="custom-file image-upload--container">
           <input type="file" onchange='validateFirstName(this)' id="FirstNameImage" class="custom-file-input shadow-none" name="FirstNameImage">
           <label id="FirstNameLabel" class="custom-file-label" for="FirstNameImage">Select image...</label>
@@ -88,6 +89,7 @@
 
       <div class="form-group">
         <label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
+        <label for="">MAX UP TO 2MB</label>
       <div class="custom-file image-upload--container">
         <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input shadow-none" name="LastNameImage">
         <label id="LastNameLabel"  class="custom-file-label" for="LastNameImage">Select image...</label>
