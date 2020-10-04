@@ -6,6 +6,11 @@ import base64
 from werkzeug.utils import secure_filename
 
 app = Flask("nomi_app") #making an app
+firstName = 'None'
+lastName = 'None'
+nickName = 'None'
+gender = 'None'
+audio = 'None'
 
 # Specifies a path to save images and allows image types
 
@@ -100,6 +105,13 @@ def results_page():
 
         form_data = request.form
 
+        global firstName, lastName, nickName, gender, audio
+        form_data = request.form
+        firstName = form_data['FirstName']
+        lastName = form_data['LastName']
+        nickName = form_data['NickName']
+        gender = form_data["selectGender"]
+        audio = form_data["NameRecording"]
 
         return render_template("display_page.html",
         NickName = form_data["NickName"],
@@ -107,8 +119,8 @@ def results_page():
         FirstName = form_data['FirstName'],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
-        #FirstNameImage = form_data["FirstNameImage"],
-        NameRecording=form_data["NameRecording"],
+        # FirstNameImage = form_data["FirstNameImage"],
+        NameRecording=audio,
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],
@@ -116,12 +128,15 @@ def results_page():
         #LastNameImage = form_data["LastNameImage"]
         )
 
-@app.route("/widget", methods=['POST'])
+@app.route("/widget")
 def widget_page():
-   
-  
+        global firstName, lastName, nickName, gender, audio
         return render_template("widget_page.html",
-        FirstName = form_data['FirstName'])
+                               FirstName=firstName,
+                               LastName=lastName,
+                               NickName=nickName,
+                               Gender=gender,
+                               Audio=audio)
       
 
 #debug

@@ -20,7 +20,7 @@ h3 {
 	color: black;
 }
 h4 {
-	color: salmon;
+	color: #007a7c;
 }
 h5 {
 	color: lightslategray;
@@ -424,7 +424,7 @@ input:checked + .slider:before {
 		bottom: 0px;
 		left: 0px;
 		right: 0px;
-		background-color: salmon;
+		background-color:  #007a7c;
 		display: flex;
 		flex-direction: row;
 	
@@ -454,5 +454,5 @@ input:checked + .slider:before {
 	border: none;
 	color: white;
 	boxShadow: none;
-	background-color: salmon;
+	background-color:  #007a7c;
 }
