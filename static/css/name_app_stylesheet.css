@@ -76,39 +76,41 @@ li {
 	margin: 0;
 }
 
-.nav-item {
+.nav_item {
 	list-style: none;
 }
 
-.nav-item + .nav-item {
+.nav_item + .nav_item {
 	padding-left: 2em;
 }
 
-.nav-link {
+.nav_link {
 	text-decoration: none;
 	position: relative;
 	color: #fff;
 	letter-spacing: 3px;
 	font-weight: 600;
+	padding: 0;
 }
 
-.nav-link:before {
+.nav_link:before {
 	content: "";
 	position: absolute;
 	width: 0;
 	height: 2px;
-	bottom: 9px;
+	bottom: -4px;
 	left: 0;
 	background-color: #fff;
 	visibility: hidden;
 	transition: all 0.3s ease-in-out;
 }
 
-.nav-link:hover {
+.nav_link:hover {
 	color: #fff;
+	text-decoration: none;
 }
 
-.nav-link:hover::before {
+.nav_link:hover::before {
 	visibility: visible;
 	width: 100%;
 }
