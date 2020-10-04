@@ -220,7 +220,7 @@ select,
 	justify-content: center;
 	width: 100px;
 	height: 100px;
-	background: rgb(233, 205, 205);
+	background: #007a7c;
 	border-radius: 50%;
 	cursor: pointer;
 	position: relative;
@@ -235,7 +235,7 @@ select,
 
 .download-button {
 	font-size: 4em;
-	color: salmon;
+	color: #fff;
 }
 
 /* Footer */

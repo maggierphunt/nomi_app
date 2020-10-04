@@ -97,10 +97,13 @@ def results_page():
         FreeTextContentLastName = form_data["LastNameFreeTextContent"])
         # LastNameImage = form_data["LastNameImage"])
 
-@app.route("/widget",methods=["GET"])
+@app.route("/widget", methods=['POST'])
 def widget_page():
+   
+  
         return render_template("widget_page.html",
         FirstName = form_data['FirstName'])
+      
 
 #debug
 app.run(debug=True) #runs the app. the debug part - unlocks debugging feature

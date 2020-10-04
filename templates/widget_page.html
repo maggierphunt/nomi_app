@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap" rel="stylesheet">
 
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
@@ -22,7 +22,32 @@
 </head>
 <body>
 <h1>Teo</h1>
-<h1>{{FirstName}}</h1>
-</body>
 
+
+
+
+<h1>{{FirstName}}</h1>
+
+<div class="display-card">
+  <div class="display-card-body">
+
+      {% if NickName %}
+
+      <i>and my name is</i>
+
+      {% else %} {% endif %}
+
+      <h2>{{FirstName}}
+
+      {% if LastName %}
+
+          {{LastName}}</h2>
+
+      {% else %} {% endif %}
+
+      <h5>
+
+
+</body>
+<script src="/static/js/name_app_javascript.js"></script>
 </html>
