@@ -139,10 +139,32 @@ textarea:focus,
 input:focus {
 	outline: none;
 }
-h2 {
-	color: salmon;
+
+input,
+textarea,
+select,
+.custom-file-label,
+#recording {
+	border: 1px solid #007a7c !important;
 }
 
+#recording {
+	color: #495057;
+	width: 100%;
+	box-shadow: none;
+	background-color: white;
+}
+
+#recording:hover {
+	background-color: #007a7c;
+	color: black;
+}
+
+#submit-button-for-form {
+	border: 2px solid #007a7c;
+	background-color: #007a7c;
+	color: #fff;
+}
 /* Image Upload */
 
 .image-upload--container {
@@ -405,12 +427,4 @@ input:checked + .slider:before {
 	color: white;
 	boxShadow: none;
 	background-color: salmon;
-}
-
-#recording {
-	border: 1px solid salmon;
-	color: salmon;
-	width: 100%;
-	box-shadow: none;
-	background-color: white;
 }
