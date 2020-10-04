@@ -21,33 +21,20 @@
     
 </head>
 <body>
-<h1>Teo</h1>
+<body>
+        <img src="/static/images/widget_img.png" style="margin:0; padding:0; display:block; float:left; width:11em;">
+        <h1 style="padding:0 0 0 10em; margin: 0; font-size:15pt; color: #005D5F;">{{NickName}}</h1>
+        <h2 style="padding:0 0 0 15.1em; margin: 0; font-size:10pt; color: #007A7C; display:block; text-align: left;">{{FirstName}} {{LastName}}</h2>
+        <p style="color:#007A7C; font-size:8pt; padding:0 0 0 18.8em; margin:0;">-{{Gender}}</p>
+        <audio id="recordedAudio3">
+            <source src="{{ Audio }}" type="audio/ogg">
+        </audio>
+        <img src="/static/images/widget_play.png" style="margin:0; padding:0 0 0 1.5em; display:block; width:3.5em;" onclick="playAudio()">
+    </body>
 
-
-
-
-<h1>{{FirstName}}</h1>
-
-<div class="display-card">
-  <div class="display-card-body">
-
-      {% if NickName %}
-
-      <i>and my name is</i>
-
-      {% else %} {% endif %}
-
-      <h2>{{FirstName}}
-
-      {% if LastName %}
-
-          {{LastName}}</h2>
-
-      {% else %} {% endif %}
-
-      <h5>
-
-
+    <script>
+        var recordedAudio3 = document.getElementById('recordedAudio3');
+        function playAudio() { recordedAudio3.play(); }
+    </script>
 </body>
-<script src="/static/js/name_app_javascript.js"></script>
 </html>
