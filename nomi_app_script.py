@@ -3,6 +3,7 @@ import os
 from jinja2 import Template
 import io
 import base64
+from werkzeug.utils import secure_filename
 
 app = Flask("nomi_app") #making an app
 
@@ -42,21 +43,35 @@ def landing_page():
 
                 if request.files:
 
-                        image = request.files["FirstNameImage"]
+                        FirstNameImage = request.files["FirstNameImage"]
 
-                        if image.filename == "":
+                        if FirstNameImage.filename == "":
                                 print("Image must have a filename")
                                 return redirect(request.url)
                 
-                        if not allowed_image(image.filename):
+                        if not allowed_image(FirstNameImage.filename):
                                 print("That image extension is not allowed")
                                 return redirect(request.url)
 
-                        image.save(os.path.join(app.config['IMAGE_UPLOADS'], image.filename))
+                        FirstNameImage.save(os.path.join(app.config['IMAGE_UPLOADS'], FirstNameImage.filename))
 
                         print('Image saved!')
                         
-                        
+                if request.files:
+
+                        LastNameImage = request.files["LastNameImage"]
+
+                        if LastNameImage.filename == "":
+                                print("Image must have a filename")
+                                return redirect(request.url)
+                
+                        if not allowed_image(LastNameImage.filename):
+                                print("That image extension is not allowed")
+                                return redirect(request.url)
+
+                        LastNameImage.save(os.path.join(app.config['IMAGE_UPLOADS'], LastNameImage.filename))
+
+                        print('Image saved!')        
         #                 html = """
         #  <html>
         #    <body>
@@ -79,23 +94,27 @@ def landing_page():
 
 #Results
 @app.route("/results", methods=['POST'])      #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
+        #image processing!
+
 def results_page():
 
         form_data = request.form
 
+
         return render_template("display_page.html",
-        NickName = form_data.get("NickName"),
+        NickName = form_data["NickName"],
         NickNamePronunciation = form_data["NickNamePronunciation"],
         FirstName = form_data['FirstName'],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
-        # FirstNameImage = form_data["FirstNameImage"],
+        #FirstNameImage = form_data["FirstNameImage"],
         NameRecording=form_data["NameRecording"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],
-        FreeTextContentLastName = form_data["LastNameFreeTextContent"])
-        # LastNameImage = form_data["LastNameImage"])
+        FreeTextContentLastName = form_data["LastNameFreeTextContent"],
+        #LastNameImage = form_data["LastNameImage"]
+        )
 
 @app.route("/widget", methods=['POST'])
 def widget_page():

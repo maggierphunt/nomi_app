@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap" rel="stylesheet">
+
+
+    
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,24 +24,26 @@
     
 </head>
 <body class="noscrollbar">
-    <div id="content-wrap">
-    <!-- header and nav bar -->    
-    <div id="header"><h1 class="header">Nomi</h1>
-      <h7><i>get my name right</i></h7>
-      <br>
-      <nav>
-      <ul>
-          <li>
-              <a href="/">Home</a>
-          </li>
-          <li  class="current-page">
-              <a href="/about">About</a>
-          </li>
-      </ul>
-      </nav>
-    </div>
-    <!-- end of header and nav bar --> 
 
+  <!-- header and nav bar -->    
+
+<header class="header-container">
+    <img class="logo" src="/static/images/logo-nomi.png" alt="nomi logo">
+    <br>
+    <nav>
+    <ul class="navigation">
+      <li class="nav_item"><a class="nav_link" href="/">HOME</a></li>
+      <li class="nav_item"><a class="nav_link" href="/about">ABOUT</a></li>
+    </ul>
+    </nav>
+</header>
+
+
+<!-- end of header and nav bar --> 
+
+<!-- Main Results Page --> 
+
+<section id="content-wrap">
 <div>
 <br>
 
@@ -46,7 +52,7 @@
         <b>Names. They’re important. 
           <br>
           Connect with confidence. </b>
-        <br>
+        <br><br>
         Getting someone’s name right is not only respectful, it’s essential. NOMI helps you to identify how a person's name is pronounced correctly.
         <br>
         NOMI allows users to create and share a name profile, which shows the user’s name, pronunciation, their pronouns, and name etymology. This is how we make names accessible to all. We champion diversity by normalising name familiarity across cultures.
@@ -57,45 +63,40 @@
 
     </div>    </div>
 
-        <!-- Footer -->
-
-        <footer class="footer-css"> <!-- w3-container w3-medium w3-padding-20 w3-center w3-gray w3-xlarge-->
+  <!-- Footer -->
 
 
-    <div class="footer-css footer-container">
-      
-      <div class="dropdown">
-        <a onclick="myFunction()"  onmouseout="clearShare()" class="dropbtn"><img class="share-photo" src="/static/images/share.png" alt="share"></a>
-        <div id="myDropdown" class="dropdown-social">
-          <div class="dropdown-content2">
-            <a href="#"><img src="/static/images/insta.png" alt="instagram"></a>
-            <a href="#"><img src="/static/images/twitter.png" alt="twitter"></a>
-            <a href="#"><img src="/static/images/facebook.png" alt="facebook"></a>
-          </div>
+  <footer class="footer-css w3-medium w3-padding-20 w3-center w3-gray w3-xlarge">
+    <div class="footer-container">
+
+      <div class="social-container">
+        <a><i class="social-icons fas fa-share-alt sharebtn"></i></a>
+      </div>
+        <div class="footer-navbar">
+            <a href="#"><i class="social-icons fab fa-instagram"></i></a>
+            <a href="#"><i class="social-icons fab fa-twitter"></i></a>
+            <a href="#"><i class="social-icons fab fa-facebook"></i></a>
         </div>
-      </div>
-    
-      <!-- <a href="#"><img src="/static/images/share.png" alt="share"></a> -->
-
-      <div class="zoom-inout"> 
-        <a href="#"><img src="/static/images/minus.png" alt="zoom out"></a>
-        <a href="#"><img src="/static/images/plus.png" alt="zoom in"></a>
-      </div>
-      
-      <div class="switch-container">
-        <label class="switch-toggle" for="checkbox">
-          <input type="checkbox" id="checkbox" />
-          <div class="slider round"></div>
-        </label>
-        <p>Enable Dark Mode</p>
-      </div>
-
+     
+    <!-- <button class="btn btn-primary btn-social" id="btn-share" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> -->
    
+      
+        <div class="zoom-inout"> 
+          <a href="#"><i class="social-icons fas fa-minus-circle"></i></a>
+          <a href="#"><i class="social-icons fas fa-plus-circle"></i></a>
+        </div>
+      
+        <div class="switch-container">
+          <label class="switch-toggle" for="checkbox">
+            <input onclick="darkmodeToggle()" type="checkbox" id="checkbox" />
+            <div class="slider round"></div>
+          </label>
+          <p>Enable Dark Mode</p>
+        </div>
+    
+
+    </div>
 </footer>
-
-
-</div>
-
 </body>
 <script src="../static/js/name_app_javascript.js"></script>
 </html>
