@@ -51,6 +51,7 @@ h5 {
 	text-align: center;
 	word-wrap: break-word;
 	margin: 1em 0;
+	position: relative;
 }
 
 /*bullets and links for header */
@@ -196,6 +197,7 @@ select,
 	width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
+	z-index: -1;
 }
 
 .first-name-error,
@@ -244,7 +246,7 @@ select,
 
 .footer-container {
 	display: flex;
-	position: relative;
+	position: fixed;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5em;
@@ -254,6 +256,10 @@ select,
 	height: 6.5rem;
 	width: 100%;
 	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 0;
 }
 
 .footer-navbar {
@@ -415,13 +421,13 @@ input:checked + .slider:before {
 		font-size: small;
 		padding-top: 10px;
 		position: fixed;
-		position: fixed;
 		bottom: 0px;
 		left: 0px;
 		right: 0px;
 		background-color: salmon;
 		display: flex;
 		flex-direction: row;
+	
 	}
 
 	#content-wrap {
