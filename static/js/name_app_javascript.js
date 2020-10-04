@@ -8,6 +8,10 @@ var recordedAudio = document.getElementById('recordedAudio');
 
 var recordedAudio2 = document.getElementById('recordedAudio2');
 
+var FirstNameImage = document.getElementById('FirstNameImage');
+
+var LastNameImage = document.getElementById('LastNameImage');
+
 var firstNameRec = document.getElementById('NameRecording');
 
 var replay = document.getElementById('replay');
@@ -158,3 +162,24 @@ function play() {
 function playAudio() {
 	recordedAudio2.play();
 }
+
+
+//image
+
+navigator.mediaDevices.getUserMedia({ img: true }).then(image1);{
+	imageHandlerFunction(image1);
+}
+
+function imageHandlerFunction(image1) {
+	{
+			let blob = new Blob(image1, { type: 'img' });
+			const url = URL.createObjectURL(blob);
+			FirstNameImage.src = url;
+			var xhr = new XMLHttpRequest();
+			xhr.open('POST', url, true);
+			xhr.responseType = 'blob';
+			FirstNameImage.value = url;
+			//              
+		}
+	}
+

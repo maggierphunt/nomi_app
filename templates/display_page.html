@@ -106,10 +106,10 @@
 
         {% if FirstNameImage %}
 
-        
-        <img id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
-          <source src="{{ FirstNameImage }}" type="image">
-          </img>
+        <div class="card-image-top">
+      
+        <img src="{{ FirstNameImage }}" type="image"id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
+        </div
         {% else %} {% endif %}
 
         <div class="display-card-body">
@@ -133,8 +133,11 @@
     <div class="display-card">
       {% if LastNameImage %}
 
-        <img src="{{ LastNameImage }}" class="card-image-top" alt="Image of how to write my Last Name">
-
+        
+        <div class="card-image-top">
+          <img src="{{ LastNameImage }}" type="image"id="LastNameImage" class="card-image-top" alt="Image of how to write my Last Name">
+  </div
+       
       {% else %} {% endif %}
 
         <div class="display-card-body">
@@ -148,26 +151,7 @@
 
     {% else %} {% endif %}
 
-    {% if LastName %}
-
-    <div class="display-card">
-
-        {% if LastNameImage %}
-
-        <img src="..." class="card-image-top" alt="Image of how to write my Last Name">
-        <!-- <img src="data:image, {{ LastNameImage }}"> -->
-
-        {% else %} {% endif %}
-
-        <div class="display-card-body">
-            <h5>{{LastName}}</h5>
-            <i>Origin and meaning</i>
-            <br>
-            <p>{{FreeTextContentLastName}}</p>
-        </div>
-    </div>
-
-    {% else %} {% endif %}
+  
 
     <div class="download-container">
         <a href="/widget"><i class="fas fa-download download-button"></i></a>

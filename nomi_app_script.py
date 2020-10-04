@@ -12,9 +12,9 @@ nickName = 'None'
 gender = 'None'
 audio = 'None'
 
-# Specifies a path to save images and allows image types
+#Specifies a path to save images and allows image types
 
-app.config['IMAGE_UPLOADS'] =  "/Users/Mio/Desktop/nomi_app/static/images/uploads"
+#app.config['IMAGE_UPLOADS'] =  "TBC"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["PNG", "JPEG", "JPG", "GIF"]
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024 
 
@@ -46,8 +46,8 @@ def landing_page():
 
         if request.method == "POST":
 
-                if request.files:
-
+               if request.files:
+##
                         FirstNameImage = request.files["FirstNameImage"]
 
                         if FirstNameImage.filename == "":
@@ -62,17 +62,17 @@ def landing_page():
 
                         print('Image saved!')
                         
-                if request.files:
+                        if request.files:
 
-                        LastNameImage = request.files["LastNameImage"]
+                                LastNameImage = request.files["LastNameImage"]
 
                         if LastNameImage.filename == "":
                                 print("Image must have a filename")
                                 return redirect(request.url)
                 
                         if not allowed_image(LastNameImage.filename):
-                                print("That image extension is not allowed")
-                                return redirect(request.url)
+                               print("That image extension is not allowed")
+                        return redirect(request.url)
 
                         LastNameImage.save(os.path.join(app.config['IMAGE_UPLOADS'], LastNameImage.filename))
 
@@ -86,13 +86,13 @@ def landing_page():
         #         """
                         
         #                 return html.format(HTMLmessage=message)
-                        # def submit_message():
-                        #         message_submit = "The file was uploaded successfully"
-                        #         return render_template("user_input_page.html", message_submit=message_submit) 
+                        def submit_message():
+                                 message_submit = "The file was uploaded successfully"
+                                 return render_template("user_input_page.html", message_submit=message_submit) 
                         
-                        # submit_message()v
-                        message_submit = "<script>`The file was uploaded successfully`</script>"
-                        return render_template("user_input_page.html", message_submit=message_submit)
+                                #submit_message()v
+                        #message_submit = "<script>`The file was uploaded successfully`</script>"
+                      # return render_template("user_input_page.html", message_submit=message_submit)
                         return redirect(request.url)
         
         return render_template("user_input_page.html") #runs the landing page
@@ -111,7 +111,8 @@ def results_page():
         lastName = form_data['LastName']
         nickName = form_data['NickName']
         gender = form_data['selectGender']
-        image1 = request.files['FirstNameImage']
+        FirstNameImage = request.files['FirstNameImage']
+        LastNameImage = request.files['LastNameImage']
         audio = form_data['NameRecording']
  
         
@@ -122,13 +123,13 @@ def results_page():
         FirstName = form_data['FirstName'],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
-        FirstNameImage = image1,
+        FirstNameImage = FirstNameImage,
         NameRecording=audio,
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],
         FreeTextContentLastName = form_data["LastNameFreeTextContent"],
-        #LastNameImage = LastNameImage
+        LastNameImage = LastNameImage
         )
 
 @app.route("/widget")
