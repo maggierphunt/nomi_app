@@ -32,11 +32,11 @@ function darkmodeToggle() {
 	const body = document.body;
 	body.classList.toggle('dark-mode');
 
-	const header = document.querySelector('.header-container');
-	header.classList.toggle('dark-mode2');
+	// const header = document.querySelector('.header-container');
+	// header.classList.toggle('dark-mode2');
 
-	const footer = document.querySelector('.footer-container');
-	footer.classList.toggle('dark-mode2');
+	// const footer = document.querySelector('.footer-container');
+	// footer.classList.toggle('dark-mode2');
 }
 
 // Image Upload
@@ -101,7 +101,7 @@ document.querySelector('.sharebtn').addEventListener('click', function() {
 	} else {
 		footerNav.style.display = 'none';
 		zoomInOut.style.display = 'inline';
-		switchContainer.style.display = 'inline';
+		switchContainer.style.display = 'flex';
 	}
 });
 

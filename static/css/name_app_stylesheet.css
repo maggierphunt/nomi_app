@@ -43,7 +43,7 @@ h5 {
 }
 
 .logo {
-	width: 15%;
+	width: 20%;
 	height: 100%;
 }
 
@@ -345,11 +345,12 @@ select,
 }
 
 input:checked + .slider {
-	background-color: rgb(216, 212, 212);
+	background-color: rgb(245, 236, 236);
 }
 
 input:checked + .slider:before {
 	transform: translateX(26px);
+	background-color: #262a3c;
 }
 
 .slider.round {
@@ -364,11 +365,6 @@ input:checked + .slider:before {
 	background-color: #262a3c;
 	color: white;
 }
-
-/* .dark-mode2 {
-	background-color: white;
-	color: salmon;
-} */
 
 /*display cards*/
 .display-card {
