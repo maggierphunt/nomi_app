@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 body {
 	background-color: #f7f7f7;
@@ -38,6 +39,12 @@ h5 {
 	left: 0px;
 	right: 0px;
 	line-height: 40px;
+	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+	width: 15%;
+	height: 100%;
 }
 
 #content-wrap {
@@ -66,6 +73,7 @@ li {
 .navigation {
 	display: flex;
 	justify-content: center;
+	margin: 0;
 }
 
 .nav-item {
@@ -79,6 +87,9 @@ li {
 .nav-link {
 	text-decoration: none;
 	position: relative;
+	color: #fff;
+	letter-spacing: 3px;
+	font-weight: 600;
 }
 
 .nav-link:before {
@@ -135,6 +146,10 @@ form {
 	margin: 0 auto;
 }
 
+label {
+	font-weight: 500;
+}
+
 textarea:focus,
 input:focus {
 	outline: none;
@@ -157,7 +172,7 @@ select,
 
 #recording:hover {
 	background-color: #007a7c;
-	color: black;
+	color: #fff;
 }
 
 #submit-btn {
@@ -236,6 +251,7 @@ select,
 	color: white;
 	height: 6.5rem;
 	width: 100%;
+	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
 }
 
 .footer-navbar {
@@ -252,12 +268,13 @@ select,
 }
 
 .social-icons {
-	font-size: 2em;
+	font-size: 3em;
 	display: inline-block;
 	position: relative;
 	bottom: 0;
 	display: flex;
 	cursor: pointer;
+	color: #fff;
 }
 
 .social-icons a {
@@ -278,7 +295,7 @@ select,
 }
 
 .switch-container p {
-	font-size: 0.5em;
+	font-size: 1em;
 	margin: 0;
 }
 
@@ -344,14 +361,14 @@ input:checked + .slider:before {
 }
 
 .dark-mode {
-	background-color: black;
+	background-color: #262a3c;
 	color: white;
 }
 
-.dark-mode2 {
+/* .dark-mode2 {
 	background-color: white;
 	color: salmon;
-}
+} */
 
 /*display cards*/
 .display-card {
