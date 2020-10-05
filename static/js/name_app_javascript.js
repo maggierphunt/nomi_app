@@ -16,12 +16,12 @@ const stylesOn = {
 	border: 'none',
 	color: 'white',
 	boxShadow: 'none',
-	backgroundColor: 'salmon'
+	backgroundColor: '#007a7c'
 };
 
 const stylesOff = {
-	border: '1px solid salmon',
-	color: 'salmon',
+	border: '1px solid #007a7c',
+	color: '#007a7c',
 	boxShadow: 'none',
 	backgroundColor: 'white'
 };

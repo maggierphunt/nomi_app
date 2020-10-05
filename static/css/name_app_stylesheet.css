@@ -235,7 +235,6 @@ select,
 	height: 6.5rem;
 	width: 100%;
 	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
-
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -407,7 +406,7 @@ input:checked + .slider:before {
 
 	#content-wrap {
 		padding-top: 120px; /*header height */
-		padding-bottom: 120px; /* Footer height */
+		padding-bottom: 150px; /* Footer height */
 		padding-left: 150px;
 		padding-right: 150px;
 	}
