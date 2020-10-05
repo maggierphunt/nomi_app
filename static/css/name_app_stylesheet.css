@@ -20,7 +20,7 @@ h3 {
 	color: black;
 }
 h4 {
-	color: #007a7c;
+	color: black;
 }
 h5 {
 	color: lightslategray;
@@ -37,6 +37,11 @@ h5 {
 .logo {
 	width: 20%;
 	height: 100%;
+}
+
+.about-page {
+	width: 80%;
+	margin: 0 auto;
 }
 
 #content-wrap {
@@ -167,7 +172,6 @@ select,
 }
 /* Image Upload */
 
-
 .image-upload--container {
 	position: relative;
 	width: 100%;
@@ -236,7 +240,6 @@ select,
 	left: 0px;
 	right: 0px;
 	z-index: 1;
-
 }
 .about-page-footer {
 	position: fixed;
@@ -427,6 +430,5 @@ input:checked + .slider:before {
 	color: white;
 
 	box-shadow: none;
-	background-color:  #007a7c;
-
+	background-color: #007a7c;
 }
