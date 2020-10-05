@@ -47,7 +47,7 @@ h5 {
 #content-wrap {
 	text-align: center;
 	word-wrap: break-word;
-	margin: 1em 0;
+	margin: 1em 2em;
 	position: relative;
 }
 
@@ -235,7 +235,7 @@ select,
 
 .footer-container {
 	display: flex;
-	position: relative;
+	position: fixed;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5em;
