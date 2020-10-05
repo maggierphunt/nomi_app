@@ -238,7 +238,7 @@ select,
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	z-index: 1;
+	z-index: 0;
 }
 .about-page-footer {
 	position: fixed;
@@ -409,6 +409,7 @@ input:checked + .slider:before {
 		padding-bottom: 150px; /* Footer height */
 		padding-left: 150px;
 		padding-right: 150px;
+		position: relative;
 	}
 	ul {
 		align-self: center;
