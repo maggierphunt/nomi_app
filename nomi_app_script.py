@@ -4,12 +4,18 @@ from jinja2 import Template
 import io
 import base64
 from werkzeug.utils import secure_filename
+from urllib.parse import urlencode, urlparse, parse_qs
+
+from lxml.html import fromstring
+from requests import get
 
 app = Flask("nomi_app") #making an app
 firstName = 'None'
 lastName = 'None'
 nickName = 'None'
 gender = 'None'
+FirstNameImage = 'None'
+LastNameImage = 'None'
 audio = 'None'
 
 #Specifies a path to save images and allows image types
@@ -100,52 +106,43 @@ def landing_page():
 #Results
 @app.route("/results", methods=['POST'])      #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
         
-def get_first_name_history():
-        import requests
+#def get_first_name_history():
+       
+        #form_data = request.form
 
-        form_data = request.form
-        FirstNameOriginQuery = '"' + form_data['FirstName'] +' name meaning and origin"'
-
-        headers = { 'apikey': '1aa12620-069e-11eb-ab21-d37cc52af6ba' }
+       # FirstNameOriginRequest = '"https://www.google.com/search?q="'+form_data['FirstName']+'+name+origin+and+history"'
         
-        params = (
-        ("q", FirstNameOriginQuery),
-        ("device","desktop"),
-        ("gl","GB"),
-         ("hl","en"),
-        ("search_engine","google.co.uk"),
-         ("location","United Kingdom"),
-        ("num","1"),
-        );
+       # raw = get(FirstNameOriginRequest).text
+       # page = fromstring(raw)
 
-        response = requests.get('https://app.zenserp.com/api/v2/search', headers=headers, params=params);
- 
-        return get_first_name_history()
+#for result in page.cssselect(".r a"):
+ #   url = result.get("href")
+   # if url.startswith("/url?"):
+   #     url = parse_qs(urlparse(url).query)['q']
+   # print(url[0])
 
-        FirstNameOrigin = get_first_name_history()
-
-def get_last_name_history(self):
-        import requests
-
-        form_data = request.form  
-        LastNameOriginQuery = '"' + form_data['LastName'] +' name meaning and origin"'
+#FirstNameOrigin = get_first_name_history()
         
-        headers = { 'apikey': '1aa12620-069e-11eb-ab21-d37cc52af6ba' }
-        params = (
-        ("q", LastNameOriginQuery),
-        ("device","desktop"),
-        ("gl","GB"),
-         ("hl","en"),
-        ("search_engine","google.co.uk"),
-         ("location","United Kingdom"),
-        ("num","1"),
-        );
 
-        response = requests.get('https://app.zenserp.com/api/v2/search', headers=headers, params=params);
 
-        return get_last_name_history()
+#def get_last_name_history(self):
+ #      form_data = request.form 
 
-        LastNameOrigin = get_last_name_history()
+   #    LastNameOriginRequest = '"https://www.google.com/search?q="'+form_data['LastName']+'+surname+origin+and+history"'
+       
+    #   raw = get(LastNameOriginRequest).text
+
+     #  page = fromstring(raw)
+
+     #  for result in page.cssselect(".r a"):
+          #      url = result.get("href")
+      # if url.startswith("/url?"):
+                #url = parse_qs(urlparse(url).query)['q']
+      # print(url[0])
+
+      # return get_last_name_history()
+
+      # LastNameOrigin = get_last_name_history()
 
 def results_page():
 
@@ -172,8 +169,8 @@ def results_page():
         NameRecording=audio,
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
-        FreeTextContentFirstName = form_data["FreeTextContentFirstName"],
-        FreeTextContentLastName = form_data["FreeTextContentLastName"],
+       # FreeTextContentFirstName = form_data["FreeTextContentFirstName"],
+        #FreeTextContentLastName = form_data["FreeTextContentLastName"],
         LastNameImage = LastNameImage
         )
 
