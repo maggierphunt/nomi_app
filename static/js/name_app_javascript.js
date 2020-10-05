@@ -8,9 +8,9 @@ var recordedAudio = document.getElementById('recordedAudio');
 
 var recordedAudio2 = document.getElementById('recordedAudio2');
 
-var FirstNameImage = document.getElementById('FirstNameImage');
+//var FirstNameImage = document.getElementById('FirstNameImage');
 
-var LastNameImage = document.getElementById('LastNameImage');
+//var LastNameImage = document.getElementById('LastNameImage');
 
 var firstNameRec = document.getElementById('NameRecording');
 
@@ -184,23 +184,4 @@ function playAudio() {
 	recordedAudio2.play();
 }
 
-
-//image -  copied from recording!
-
-//navigator.mediaDevices.getUserMedia({ img: true }).then(image1);{
-	//imageHandlerFunction(image1);}
-
-//function imageHandlerFunction(image1) {
-	//{
-	//		let blob = new Blob(image1, { type: 'image/png' });
-	//		const FirstNameImageURL = URL.createObjectURL(FirstNameImage);
-			
-	//		FirstNameImage.src = url;
-	//		var image-1 = new XMLHttpRequest();
-	//		image-1.open('POST', url, true);
-	//		image-1.responseType = 'blob';
-	//		FirstNameImage.value = url;
-			//              
-	//	}
-	//}
 

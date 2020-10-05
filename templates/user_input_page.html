@@ -62,7 +62,8 @@
       <div class="custom-file image-upload--container">
         <input onchange='validateFirstName(this)' type="file" id="FirstNameImage" class="custom-file-input shadow-none" name="FirstNameImage">
         <label id="FirstNameLabel"  class="custom-file-label" for="FirstNameImage">Select image...</label>
-        </div>
+        </div> </div>
+        <div class="alert alert-primary first-name-error"></div>
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
@@ -85,7 +86,7 @@
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
         <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
       </div>
-      <div class="form-group middlename-title"> 
+      <!--<div class="form-group middlename-title"> 
         <i class="middlename-photo fas fa-plus-circle"></i>
           <p>Add a Middle Name</p>
       </div>
@@ -94,7 +95,7 @@
         <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your middle name here">
       </div>
 
-
+    -->
 
       <div class="form-group">
         <label for="LastName">Last Name</label>
@@ -128,7 +129,7 @@
       </div> -->
       <div class="form-group">
       <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
-      <div class="custom-file">
+      <div class="custom-file image-upload--container">
         <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
         <input id="replay" class="btn btn-secondary shadow-none" type="button" value="PLAY" onclick="play()">
         <audio id="recordedAudio" src=""></audio>
@@ -141,7 +142,7 @@
         <label class="form-check-label" for="ConsentUnderStand" name="ConsentUnderStand" required>I understand that my data will be stored locally.</label>
       </div>
       <div><button type="submit" id="submit-btn">Submit</button>
-    </div></form>
+    </form>
     <br>
   
     <br>
@@ -188,5 +189,5 @@
 
 </body>
 <script src="/static/js/name_app_javascript.js"></script>
-<script src="/static/js/name_app_display.js"></script>
+
 </html>
