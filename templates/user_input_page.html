@@ -24,7 +24,6 @@
 <body class="noscrollbar">
 
 <!-- header and nav bar -->  
-
 <header class="header-container">
   <img class="logo" src="/static/images/logo-nomi.png" alt="nomi logo">
   <br>
@@ -45,7 +44,7 @@
   <p>Use the form below to submit information about your name.</p></div>
     <form form method="post" action="/results" onsubmit="return results_page()" id="user_details_form" enctype="multipart/form-data">
       <div class="form-group">
-        <label for="selectGender">What are your pronouns? (optional)</label>
+        <label for="selectGender">Example select</label>
         <select class="form-control" id="selectGender" name="selectGender">
           <option></option>
           <option>she/her/hers</option>
@@ -57,51 +56,40 @@
         <label for="FirstName">First Name</label>
         <input type="string" class="form-control shadow-none" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
       </div>
-      <div class="form-group">
-        <label for="FirstNameImage">Upload an image of how to write your first name (optional) MAX UP TO 2MB</label>
-      <div class="custom-file image-upload--container">
-        <input onchange='validateFirstName(this)' type="file" id="FirstNameImage" class="custom-file-input shadow-none" name="FirstNameImage">
-        <label id="FirstNameLabel"  class="custom-file-label" for="FirstNameImage">Select image...</label>
-        </div>
+      <div class="form-group"><label for="FirstNameImage">Upload an image of how to write your first name (optional)</label>
+        <label for="">MAX UP TO 2MB</label>
+        <div class="custom-file image-upload--container">
+          <input type="file" onchange='validateFirstName(this)' id="FirstNameImage" class="custom-file-input shadow-none" name="FirstNameImage">
+          <label id="FirstNameLabel" class="custom-file-label" for="FirstNameImage">Select image...</label>
+        </div></div>
+        <div class="alert alert-primary first-name-error"></div>
+
+        
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
       </div>
       <div class="form-group">
-        <label for="FirstNameFreeTextContent">Further information about your first name</label>
-        <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?"></textarea>
-      </div>
-      <br>
-      <div class="form-group">
-        <label for="NickName">If different, what name do you go by?</label>
+        <label for="NickName">Do you go by another name?</label>
         <input type="string" class="form-control shadow-none" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?">
       </div>
       <div class="form-group" >
         <label for="NickNamePronunciation">Preferred Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin">
-
       </div>   
       <div class="form-group">
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
         <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
       </div>
-      <div class="form-group middlename-title"> 
-        <i class="middlename-photo fas fa-plus-circle"></i>
-          <p>Add a Middle Name</p>
-      </div>
-      <div class="form-group middlename-add">
-        <label for="MiddleName">Middle Name</label>
-        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your middle name here">
-      </div>
-
-
-
       <div class="form-group">
         <label for="LastName">Last Name</label>
         <input type="string" class="form-control shadow-none" id="LastName" name="LastName" placeholder="Enter your last name here">
       </div>
+
+
       <div class="form-group">
-        <label for="LastNameImage">Upload an image of how to write your last name (optional) MAX UP TO 2MB</label>
+        <label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
+        <label for="">MAX UP TO 2MB</label>
       <div class="custom-file image-upload--container">
         <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input shadow-none" name="LastNameImage">
         <label id="LastNameLabel"  class="custom-file-label" for="LastNameImage">Select image...</label>
@@ -111,14 +99,14 @@
 
 
       <div class="form-group">
-        <label for="LastNamePronunciation">Last Name Pronunciation</label>
+        <label for="exampleFormControlInput1">Last Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
       </div>
       <div class="form-group">
         <label for="LastNameFreeTextContent">Further information about your last name</label>
         <textarea class="form-control shadow-none" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>
-  <br>
+  
       <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">
         <input type="file" id="file-btn" class="custom-file-input" name="LastNameImage">
@@ -128,29 +116,27 @@
       </div> -->
       <div class="form-group">
       <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
-      <div class="custom-file">
+      <div class="custom-file image-upload--container">
         <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
         <input id="replay" class="btn btn-secondary shadow-none" type="button" value="PLAY" onclick="play()">
         <audio id="recordedAudio" src=""></audio>
         <input type="hidden" class="form-control shadow-none" id="NameRecording" name="NameRecording" value="">
       </div></div>
 
-<br>
+      <!-- <div class="form-group">
+        <label for="LastNameRecording">Upload a recording of you saying your last name here (optional)</label>
+        <input type="file" class="form-control-file" id="LastNameRecording" name="LastNameRecording">
+      </div> -->
+
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="ConsentUnderStand" required>
         <label class="form-check-label" for="ConsentUnderStand" name="ConsentUnderStand" required>I understand that my data will be stored locally.</label>
       </div>
-      <div><button type="submit" id="submit-btn">Submit</button>
-    </div></form>
-    <br>
-  
-    <br>
-    <br>
-    <br>
+      <button type="submit" id="submit-btn" >Submit</button>
+    </form>
   </div>
 
 </section>
-
   <!-- Footer -->
 
 
@@ -158,7 +144,7 @@
     <div class="footer-container">
 
       <div class="social-container">
-        <!-- <a><i class="social-icons fas fa-share-alt sharebtn"></i></a> -->
+        <a><i class="social-icons fas fa-share-alt sharebtn"></i></a>
       </div>
         <div class="footer-navbar">
             <a href="#"><i class="social-icons fab fa-instagram"></i></a>
@@ -188,5 +174,4 @@
 
 </body>
 <script src="/static/js/name_app_javascript.js"></script>
-<script src="/static/js/name_app_display.js"></script>
 </html>
