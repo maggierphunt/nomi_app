@@ -47,7 +47,7 @@ h5 {
 #content-wrap {
 	text-align: center;
 	word-wrap: break-word;
-	margin: 1em 0;
+	margin: 1em 2em;
 	position: relative;
 }
 
@@ -145,6 +145,18 @@ select,
 	display: none;
 }
 
+
+.lastname-add {
+	display: none;
+}
+
+.lastname-photo {
+	color: #007a7c;
+	margin-right: 0.5em;
+	cursor: pointer;
+	font-size: 2em;
+}
+
 #recording {
 	color: #495057;
 	width: 100%;
@@ -235,10 +247,16 @@ select,
 	height: 6.5rem;
 	width: 100%;
 	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
+
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	z-index: 0;
+	z-index: 1;
+}
+.about-page-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 .about-page-footer {
 	position: fixed;
@@ -379,11 +397,19 @@ input:checked + .slider:before {
 	display: flex;
 	text-align: center;
 }
+
+#ConsentUnderStand:checked {
+	color: black;
+}
+
 /*adapt to small screens */
 
 /*for small screens*/
 
 @media only screen and (max-width: 500px) {
+	#user_details_form {
+		width: 100%;
+	}
 	#header {
 		height: 100px;
 		font-size: large;
@@ -404,13 +430,6 @@ input:checked + .slider:before {
 		flex-direction: row;
 	}
 
-	#content-wrap {
-		padding-top: 120px; /*header height */
-		padding-bottom: 150px; /* Footer height */
-		padding-left: 150px;
-		padding-right: 150px;
-		position: relative;
-	}
 	ul {
 		align-self: center;
 		padding: 0;

@@ -26,6 +26,40 @@ const stylesOff = {
 	backgroundColor: 'white'
 };
 
+// Add Middle Name Toggle
+
+const showMiddleName = document.querySelector('.middlename-add');
+const middleNameBtn = document.querySelector('.middlename-photo');
+const showLastName = document.querySelector('.lastname-add');
+const lastNameBtn = document.querySelector('.lastname-photo');
+
+middleNameBtn.addEventListener('click', function(event) {
+	middleName = !middleName;
+
+	if (middleName === true) {
+		showMiddleName.style.display = 'inline';
+		const p = document.createElement('p');
+		showMiddleName.appendChild(p);
+	} else {
+		showMiddleName.style.display = 'none';
+	}
+});
+
+let middleName = false;
+
+lastNameBtn.addEventListener('click', function(event) {
+	lastName = !lastName;
+
+	if (lastName === true) {
+		showLastName.style.display = 'inline';
+		const p = document.createElement('p');
+		showLastName.appendChild(p);
+	} else {
+		showLastName.style.display = 'none';
+	}
+});
+
+let lastName = false;
 // Dark Mode Toggle
 
 function darkmodeToggle() {
