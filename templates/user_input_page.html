@@ -81,6 +81,16 @@
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
         <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
       </div>
+      <div class="form-group middlename-title"> 
+        <i class="middlename-photo fas fa-plus-circle"></i>
+          <p>Add a Middle Name</p>
+      </div>
+      <div class="form-group middlename-add">
+        <label for="MiddleName">Middle Name</label>
+        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your middle name here">
+      </div>
+
+
       <div class="form-group">
         <label for="LastName">Last Name</label>
         <input type="string" class="form-control shadow-none" id="LastName" name="LastName" placeholder="Enter your last name here">
@@ -116,7 +126,7 @@
       </div> -->
       <div class="form-group">
       <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
-      <div class="custom-file image-upload--container">
+      <div class="custom-file">
         <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
         <input id="replay" class="btn btn-secondary shadow-none" type="button" value="PLAY" onclick="play()">
         <audio id="recordedAudio" src=""></audio>
