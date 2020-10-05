@@ -167,6 +167,14 @@ select,
 }
 /* Image Upload */
 
+
+.image-upload--container {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 0;
+
 .first-name-error,
 .last-name-error {
 	display: none;
@@ -223,8 +231,12 @@ select,
 	height: 6.5rem;
 	width: 100%;
 	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
-	z-index: 0;
-}
+
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+
 
 .about-page-footer {
 	position: fixed;
@@ -392,7 +404,7 @@ input:checked + .slider:before {
 
 	#content-wrap {
 		padding-top: 120px; /*header height */
-		padding-bottom: 20px; /* Footer height */
+		padding-bottom: 120px; /* Footer height */
 		padding-left: 150px;
 		padding-right: 150px;
 	}
@@ -413,6 +425,8 @@ input:checked + .slider:before {
 	float: right;
 	border: none;
 	color: white;
-	boxShadow: none;
-	background-color: #007a7c;
+
+	box-shadow: none;
+	background-color:  #007a7c;
+
 }
