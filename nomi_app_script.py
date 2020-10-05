@@ -99,7 +99,53 @@ def landing_page():
 
 #Results
 @app.route("/results", methods=['POST'])      #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.    #@ makes it a 'decorator'. line tells peple where to look inside flask framework. Decorators always followed by function.
-        #image processing!
+        
+def get_first_name_history():
+        import requests
+
+        form_data = request.form
+        FirstNameOriginQuery = '"' + form_data['FirstName'] +' name meaning and origin"'
+
+        headers = { 'apikey': '1aa12620-069e-11eb-ab21-d37cc52af6ba' }
+        
+        params = (
+        ("q", FirstNameOriginQuery),
+        ("device","desktop"),
+        ("gl","GB"),
+         ("hl","en"),
+        ("search_engine","google.co.uk"),
+         ("location","United Kingdom"),
+        ("num","1"),
+        );
+
+        response = requests.get('https://app.zenserp.com/api/v2/search', headers=headers, params=params);
+ 
+        return get_first_name_history()
+
+        FirstNameOrigin = get_first_name_history()
+
+def get_last_name_history(self):
+        import requests
+
+        form_data = request.form  
+        LastNameOriginQuery = '"' + form_data['LastName'] +' name meaning and origin"'
+        
+        headers = { 'apikey': '1aa12620-069e-11eb-ab21-d37cc52af6ba' }
+        params = (
+        ("q", LastNameOriginQuery),
+        ("device","desktop"),
+        ("gl","GB"),
+         ("hl","en"),
+        ("search_engine","google.co.uk"),
+         ("location","United Kingdom"),
+        ("num","1"),
+        );
+
+        response = requests.get('https://app.zenserp.com/api/v2/search', headers=headers, params=params);
+
+        return get_last_name_history()
+
+        LastNameOrigin = get_last_name_history()
 
 def results_page():
 
@@ -115,7 +161,6 @@ def results_page():
         LastNameImage = request.files['LastNameImage']
         audio = form_data['NameRecording']
  
-        
 
         return render_template("display_page.html",
         NickName = form_data["NickName"],
@@ -127,8 +172,8 @@ def results_page():
         NameRecording=audio,
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
-        FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],
-        FreeTextContentLastName = form_data["LastNameFreeTextContent"],
+        FreeTextContentFirstName = form_data["FreeTextContentFirstName"],
+        FreeTextContentLastName = form_data["FreeTextContentLastName"],
         LastNameImage = LastNameImage
         )
 
