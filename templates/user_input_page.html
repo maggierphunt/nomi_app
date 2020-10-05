@@ -3,15 +3,16 @@
   <head>
     <!-- title: CHANGE ME -->
     <title>Input</title>
-        
-    <!-- stylesheets -->    
+
+    <!-- stylesheets -->
     <link rel="stylesheet" href="../static/css/name_app_stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="css/anythingzoomer.css">
+
     <!-- meta -->
     <meta name="author" content="Isabel Scavetta, Mio Chung, Sumayia Ashraf, Teodora Toma, Maggie Hunt">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +20,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="An app to promote and celebrate diversity: share how your name shoupd be pronounced, its history and origins.">
     <meta name="keywords" content="python,HTML,CSS,javascript,name,API,etymology,heritage,origins,diversity,inclusion">
-    
+
 </head>
 <body class="noscrollbar">
 
-<!-- header and nav bar -->  
+<!-- header and nav bar -->
 <header class="header-container">
   <img class="logo" src="/static/images/logo-nomi.png" alt="nomi logo">
   <br>
@@ -34,13 +35,15 @@
   </ul>
   </nav>
 </header>
-<!-- end of header and nav bar --> 
+<!-- end of header and nav bar -->
 
-  
-    
+
+
     <!-- form-->
-<section id="content-wrap"> 
-<div><br>  <br>
+<section id="content-wrap">
+<div id="zoom" class="az-wrap"><br>
+  <span class="az-wrap-inner"><br>
+    
   <p>Use the form below to submit information about your name.</p></div>
     <form form method="post" action="/results" onsubmit="return results_page()" id="user_details_form" enctype="multipart/form-data">
       <div class="form-group">
@@ -64,7 +67,7 @@
         </div></div>
         <div class="alert alert-primary first-name-error"></div>
 
-        
+
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
@@ -76,7 +79,7 @@
       <div class="form-group" >
         <label for="NickNamePronunciation">Preferred Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin">
-      </div>   
+      </div>
       <div class="form-group">
         <label for="FirstNameFreeTextContent">Further information about your first name</label>
         <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
@@ -93,7 +96,7 @@
       <div class="custom-file image-upload--container">
         <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input shadow-none" name="LastNameImage">
         <label id="LastNameLabel"  class="custom-file-label" for="LastNameImage">Select image...</label>
-        
+
     </div></div>
     <div class="alert alert-primary last-name-error"></div>
 
@@ -106,12 +109,12 @@
         <label for="LastNameFreeTextContent">Further information about your last name</label>
         <textarea class="form-control shadow-none" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>
-  
+
       <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">
         <input type="file" id="file-btn" class="custom-file-input" name="LastNameImage">
         <label id="custom-text" class="custom-file-label" for="image">Select image...</label>
-        <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>   
+        <button id="btn-upload" type="button" class="btn btn-sm">Upload image</button>
         <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
       </div> -->
       <div class="form-group">
@@ -151,15 +154,15 @@
             <a href="#"><i class="social-icons fab fa-twitter"></i></a>
             <a href="#"><i class="social-icons fab fa-facebook"></i></a>
         </div>
-     
+
     <!-- <button class="btn btn-primary btn-social" id="btn-share" data-toggle="tooltip" data-placement="left" title="Tooltip on left"> -->
-   
-      
-        <div class="zoom-inout"> 
+
+
+        <div class="zoom-inout">
           <a href="#"><i class="social-icons fas fa-minus-circle"></i></a>
           <a href="#"><i class="social-icons fas fa-plus-circle"></i></a>
         </div>
-      
+
         <div class="switch-container">
           <label class="switch-toggle" for="checkbox">
             <input onclick="darkmodeToggle()" type="checkbox" id="checkbox" />
@@ -167,11 +170,20 @@
           </label>
           <p>Enable Dark Mode</p>
         </div>
-    
 
+      </span>
     </div>
 </footer>
 
 </body>
 <script src="/static/js/name_app_javascript.js"></script>
+<script src="/name_app/static/js/zoomfunction.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script src="js/jquery.anythingzoomer.js"></script>
+<script>
+  $(function(){
+    $("#zoom").anythingZoomer();
+  });
+</script>
+
 </html>
