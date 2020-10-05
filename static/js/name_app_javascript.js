@@ -8,6 +8,10 @@ var recordedAudio = document.getElementById('recordedAudio');
 
 var recordedAudio2 = document.getElementById('recordedAudio2');
 
+var FirstNameImage = document.getElementById('FirstNameImage');
+
+var LastNameImage = document.getElementById('LastNameImage');
+
 var firstNameRec = document.getElementById('NameRecording');
 
 var replay = document.getElementById('replay');
@@ -25,6 +29,25 @@ const stylesOff = {
 	boxShadow: 'none',
 	backgroundColor: 'white'
 };
+
+// Add Middle Name Toggle
+
+const showMiddleName = document.querySelector('.middlename-add');
+const middleNameBtn = document.querySelector('.middlename-photo');
+
+middleNameBtn.addEventListener('click', function(event) {
+	middleName = !middleName;
+
+	if (middleName === true) {
+		showMiddleName.style.display = 'inline';
+		const p = document.createElement('p');
+		showMiddleName.appendChild(p);
+	} else {
+		showMiddleName.style.display = 'none';
+	}
+});
+
+let middleName = false;
 
 // Dark Mode Toggle
 
@@ -49,6 +72,8 @@ const lastNameLabel = document.querySelector('#LastNameLabel');
 customFileInput.addEventListener('change', function() {
 	const fileName = customFileInput.value.split(/[\\\/]/).pop();
 	customFileLabel.innerHTML = fileName;
+	const FirstNameImage = window.URL.createObjectURL(FirstNameImage);
+	const LastNameImage = window.URL.createObjectURL(LastNameImage);
 });
 
 lastNameInput.addEventListener('change', function() {
@@ -158,3 +183,24 @@ function play() {
 function playAudio() {
 	recordedAudio2.play();
 }
+
+
+//image -  copied from recording!
+
+//navigator.mediaDevices.getUserMedia({ img: true }).then(image1);{
+	//imageHandlerFunction(image1);}
+
+//function imageHandlerFunction(image1) {
+	//{
+	//		let blob = new Blob(image1, { type: 'image/png' });
+	//		const FirstNameImageURL = URL.createObjectURL(FirstNameImage);
+			
+	//		FirstNameImage.src = url;
+	//		var image-1 = new XMLHttpRequest();
+	//		image-1.open('POST', url, true);
+	//		image-1.responseType = 'blob';
+	//		FirstNameImage.value = url;
+			//              
+	//	}
+	//}
+

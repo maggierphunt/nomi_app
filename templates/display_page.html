@@ -33,7 +33,7 @@
     <nav>
     <ul class="navigation">
       <li class="nav_item"><a class="nav_link" href="/">HOME</a></li>
-      <li class="nav_item"><a class="nav_link" href="/about">ABOUT</a></li>
+    <li class="nav_item"><a class="nav_link" href="/about">ABOUT</a></li>
     </ul>
     </nav>
 </header>
@@ -64,8 +64,8 @@
             {% else %} {% endif %}
 
             <h2>{{FirstName}}
-
-            {% if LastName %}
+            
+              {% if LastName %}
 
                 {{LastName}}</h2>
 
@@ -95,7 +95,7 @@
                     <source src="{{NameRecording}}" type="audio/ogg">
                 </audio>
           
-                <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="getElementById('recordedAudio2').play()" width="15%" height="auto">
+                <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="getElementById('recordedAudio2').play()" width="5%" height="auto">
 
                 {% else %} {% endif %}
 
@@ -106,8 +106,10 @@
 
         {% if FirstNameImage %}
 
-        <img src ="{{ FirstNameImage }}" class="card-image-top" alt="Image of how to write my First Name">
-
+        <div class="card-image-top">
+      
+        <img src="{{ FirstNameImage }}" type="image"id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
+        </div
         {% else %} {% endif %}
 
         <div class="display-card-body">
@@ -122,6 +124,7 @@
             <br>
 
             <p>{{FreeTextContentFirstName}}</p>
+            <p>{{FirstNameOrigin}}</p>
 
         </div>
     </div>
@@ -131,8 +134,11 @@
     <div class="display-card">
       {% if LastNameImage %}
 
-        <img src="{{ LastNameImage }}" class="card-image-top" alt="Image of how to write my Last Name">
-
+        
+        <div class="card-image-top">
+          <img src="{{ LastNameImage }}" type="image"id="LastNameImage" class="card-image-top" alt="Image of how to write my Last Name">
+  </div
+       
       {% else %} {% endif %}
 
         <div class="display-card-body">
@@ -141,31 +147,13 @@
             <i>Origin and meaning</i>
             <br>
             <p>{{FreeTextContentLastName}}</p>
+            <p>{{LastNameOrigin}}</p>
         </div>
     </div>
 
     {% else %} {% endif %}
 
-    {% if LastName %}
-
-    <div class="display-card">
-
-        {% if LastNameImage %}
-
-        <img src="..." class="card-image-top" alt="Image of how to write my Last Name">
-        <!-- <img src="data:image, {{ LastNameImage }}"> -->
-
-        {% else %} {% endif %}
-
-        <div class="display-card-body">
-            <h5>{{LastName}}</h5>
-            <i>Origin and meaning</i>
-            <br>
-            <p>{{FreeTextContentLastName}}</p>
-        </div>
-    </div>
-
-    {% else %} {% endif %}
+  
 
     <div class="download-container">
         <a href="/widget"><i class="fas fa-download download-button"></i></a>
@@ -211,6 +199,7 @@
 </footer>
 
 </body>
-
+<script src="/static/js/name_app_javascript.js"></script>
 <script src="/static/js/name_app_display.js"></script>
+
 </html>
