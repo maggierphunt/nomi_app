@@ -65,6 +65,7 @@
           <label id="FirstNameLabel" class="custom-file-label" for="FirstNameImage">Select image...</label>
         </div></div>
         <div class="alert alert-primary first-name-error"></div>
+
       <div class="form-group" >
         <label for="FirstNamePronunciation">First Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="FirstNamePronunciation" name="FirstNamePronunciation" placeholder="e.g. mar-i-lin" required>
@@ -76,7 +77,7 @@
 
 <!--NickName input-->
       <div class="form-group">
-        <label for="NickName">Do you go by another name?</label>
+        <label for="NickName">Do you go by another name? (optional) </label>
         <input type="string" class="form-control shadow-none" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?">
       </div>
       <div class="form-group" >
@@ -85,18 +86,23 @@
       </div>   
 
 <!--Middle Name input-->
-      <div class="form-group">
-        <label for="MiddleName">Middle Name</label>
-        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your Middle name here">
-      </div>
-      <div class="form-group"><label for="MiddleNameImage">Upload an image of how to write your Middle name (optional)</label>
-        <label for="">MAX UP TO 2MB</label>
+
+<div class="form-group middlename-title"> 
+  <i class="middlename-photo fas fa-plus-circle"></i>
+    <p>Add a Middle Name</p>
+</div>
+<div class="form-group middlename-add">
+  <label for="MiddleName">Middle Name</label>
+  <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your middle name here"><br>
+  <label for="MiddleNameImage">Upload an image of how to write your Middle name (optional)</label>
+  <label for="">MAX UP TO 2MB</label>
         <div class="custom-file image-upload--container">
           <input type="file" onchange='validateMiddleName(this)' id="MiddleNameImage" class="custom-file-input shadow-none" name="MiddleNameImage">
           <label id="MiddleNameLabel" class="custom-file-label" for="MiddleNameImage">Select image...</label>
-        </div></div>
-       <!-- <div class="alert alert-primary middle-name-error"></div>-->
-      <div class="form-group" >
+        </div>
+       <div class="alert alert-primary middle-name-error"></div>
+
+      <div class="form-group">
         <label for="MiddleNamePronunciation">Middle Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="MiddleNamePronunciation" name="MiddleNamePronunciation" placeholder="e.g. dj-een">
       </div>
@@ -104,30 +110,21 @@
         <label for="MiddleNameFreeTextContent">Further information about your Middle name</label>
         <textarea class="form-control shadow-none" id="MiddleNameFreeTextContent" rows="3" name="MiddleNameFreeTextContent" placeholder=""></textarea>
       </div>
+</div>
 
-      <div class="form-group middlename-title"> 
-        <i class="middlename-photo fas fa-plus-circle"></i>
-          <p>Add a Middle Name</p>
-      </div>
-      <div class="form-group middlename-add">
-        <label for="MiddleName">Middle Name</label>
-        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your middle name here">
-      </div>
+ 
 
 <!--Last Name input-->
 
-      <div class="form-group">
-        <label for="LastName">Last Name</label>
-        <input type="string" class="form-control shadow-none" id="LastName" name="LastName" placeholder="Enter your last name here">
-      </div>
+    
       <div class="form-group middlename-title"> 
         <i class="lastname-photo fas fa-plus-circle"></i>
-          <p>Add Another Last Name</p>
+          <p>Add a Last Name</p>
       </div>
       <div class="form-group lastname-add">
         <label for="MiddleName">Last Name</label>
-        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your last name here">
-      </div>
+        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your last name here"><br>
+      
 
       <div class="form-group">
         <label for="LastNameImage">Upload an image of how to write your last name (optional)</label>
@@ -136,18 +133,21 @@
         <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input shadow-none" name="LastNameImage">
         <label id="LastNameLabel"  class="custom-file-label" for="LastNameImage">Select image...</label>
         
-    </div></div>
+    </div>
+    </div>
+    
     <div class="alert alert-primary last-name-error"></div>
-
-
       <div class="form-group">
         <label for="exampleFormControlInput1">Last Name Pronunciation</label>
         <input type="string" class="form-control shadow-none" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
       </div>
+
       <div class="form-group">
         <label for="LastNameFreeTextContent">Further information about your last name</label>
         <textarea class="form-control shadow-none" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>
+
+    </div>
   
       <!-- <label for="ImageUpload">Upload Image</label>
       <div class="image-upload--container">

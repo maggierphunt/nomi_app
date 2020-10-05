@@ -93,6 +93,7 @@ lastNameInput.addEventListener('change', function() {
 // Image Upload - Error Messages
 
 const firstNameErrorMessage = document.querySelector('.first-name-error');
+const middleNameErrorMessage = document.querySelector('.middle-name-error');
 const lastNameErrorMessage = document.querySelector('.last-name-error');
 
 function validateFirstName(file) {
@@ -104,6 +105,18 @@ function validateFirstName(file) {
 			'File size exceeds 2 MB please upload a smaller file';
 	} else {
 		firstNameErrorMessage.style.display = 'none';
+	}
+}
+
+function validateMiddleName(file) {
+	var fileSize = file.files[0].size / 1024 / 1024; // in MB
+	if (fileSize > 2) {
+		// alert('File size exceeds 2 MB');
+		middleNameErrorMessage.style.display = 'block';
+		middleNameErrorMessage.innerHTML =
+			'File size exceeds 2 MB please upload a smaller file';
+	} else {
+		middleNameErrorMessage.style.display = 'none';
 	}
 }
 

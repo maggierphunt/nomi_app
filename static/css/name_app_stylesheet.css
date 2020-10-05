@@ -145,7 +145,6 @@ select,
 	display: none;
 }
 
-
 .lastname-add {
 	display: none;
 }
@@ -192,6 +191,7 @@ select,
 	z-index: 0;
 }
 .first-name-error,
+.middle-name-error,
 .last-name-error {
 	display: none;
 	font-size: 1em;
