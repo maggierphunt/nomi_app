@@ -154,7 +154,7 @@ def results_page():
         lastName = form_data['LastName']
         nickName = form_data['NickName']
         gender = form_data['selectGender']
-        MiddleName - form_data["MiddleName"]
+        MiddleName = form_data["MiddleName"]
         FirstNameImage = request.files['FirstNameImage']
         MiddleNameImage = request.files['MiddleNameImage']
         LastNameImage = request.files['LastNameImage']

@@ -154,14 +154,13 @@
         <p class="HTMLmessage">Message: {{ message_submit|safe }}</p>
       </div> -->
       <div class="form-group">
-      <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
-      <div class="custom-file">
-        <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
-        <input id="replay" class="btn btn-secondary shadow-none" type="button" value="PLAY" onclick="play()">
-        <audio id="recordedAudio" src=""></audio>
-        <input type="hidden" class="form-control shadow-none" id="NameRecording" name="NameRecording" value="">
-      </div></div>
-
+        <label for="NameRecording">Upload a recording of you saying your name here (optional)</label>
+        <div class="custom-file image-upload--container">
+          <button id="recording" class="btn btn-secondary" type="button" onclick="startR()">Start Recording</button>
+          <input id="replay" class="btn btn-secondary shadow-none" type="button" value="PLAY" onclick="play()">
+          <audio id="recordedAudio" src=""></audio>
+          <input type="hidden" class="form-control shadow-none" id="NameRecording" name="NameRecording" value="">
+        </div>
 <br>
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="ConsentUnderStand" required>

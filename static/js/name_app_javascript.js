@@ -8,10 +8,6 @@ var recordedAudio = document.getElementById('recordedAudio');
 
 var recordedAudio2 = document.getElementById('recordedAudio2');
 
-var FirstNameImage = document.getElementById('FirstNameImage');
-
-var LastNameImage = document.getElementById('LastNameImage');
-
 var firstNameRec = document.getElementById('NameRecording');
 
 var replay = document.getElementById('replay');
@@ -20,34 +16,35 @@ const stylesOn = {
 	border: 'none',
 	color: 'white',
 	boxShadow: 'none',
-	backgroundColor: 'salmon'
+	backgroundColor: '#007a7c'
 };
 
 const stylesOff = {
-	border: '1px solid salmon',
-	color: 'salmon',
+	border: '1px solid #007a7c',
+	color: '#007a7c',
 	boxShadow: 'none',
 	backgroundColor: 'white'
 };
+
 // add nickname toggle
 
 
-const showNickName = document.querySelector('.nickname-add');
-const NickNameBtn = document.querySelector('.nickname-photo');
+//const showNickName = document.querySelector('.nickname-add');
+//const NickNameBtn = document.querySelector('.nickname-photo');
 
-nickNameBtn.addEventListener('click', function(event) {
-	nickName = !nickName;
+//nickNameBtn.addEventListener('click', function(event) {
+//	nickName = !nickName;
 
-	if (nickName === true) {
-		showNickName.style.display = 'inline';
-		const r = document.createElement('r');
-		showNickName.appendChild(r);
-	} else {
-		showNickName.style.display = 'none';
-	}
-});
+//	if (nickName === true) {
+//		showNickName.style.display = 'inline';
+//		const r = document.createElement('r');
+//		showNickName.appendChild(r);
+//	} else {
+//		showNickName.style.display = 'none';
+//	}
+//});
 
-let ickName = false;
+//let nickName = false;
 
 // Add Middle Name Toggle
 
@@ -69,22 +66,22 @@ middleNameBtn.addEventListener('click', function(event) {
 let middleName = false;
 // Add Last Name Toggle
 
-const showLastName = document.querySelector('.lastname-add');
-const LastNameBtn = document.querySelector('.lastname-photo');
+//const showLastName = document.querySelector('.lastname-add');
+//const LastNameBtn = document.querySelector('.lastname-photo');
 
-lastNameBtn.addEventListener('click', function(event) {
-	lastName = !lastName;
+//lastNameBtn.addEventListener('click', function(event) {
+//	lastName = !lastName;
 
-	if (lastName === true) {
-		showLastName.style.display = 'inline';
-		const q = document.createElement('q');
-		showLastName.appendChild(q);
-	} else {
+//	if (lastName === true) {
+//		showLastName.style.display = 'inline';
+//		const q = document.createElement('q');
+//		showLastName.appendChild(q);
+//	} else {
 		showLastName.style.display = 'none';
-	}
-});
+//	}
+//});
 
-let lastName = false;
+//let lastName = false;
 
 // Dark Mode Toggle
 
@@ -100,6 +97,9 @@ function darkmodeToggle() {
 }
 
 // Image Upload
+var FirstNameImage = document.getElementById('FirstNameImage');
+
+var LastNameImage = document.getElementById('LastNameImage');
 
 const customFileInput = document.querySelector('#FirstNameImage');
 const customFileLabel = document.querySelector('#FirstNameLabel');
@@ -220,7 +220,6 @@ function play() {
 function playAudio() {
 	recordedAudio2.play();
 }
-
 
 //image -  copied from recording!
 
