@@ -26,6 +26,25 @@ const stylesOff = {
 	backgroundColor: 'white'
 };
 
+// Add Middle Name Toggle
+
+const showMiddleName = document.querySelector('.middlename-add');
+const middleNameBtn = document.querySelector('.middlename-photo');
+
+middleNameBtn.addEventListener('click', function(event) {
+	middleName = !middleName;
+
+	if (middleName === true) {
+		showMiddleName.style.display = 'inline';
+		const p = document.createElement('p');
+		showMiddleName.appendChild(p);
+	} else {
+		showMiddleName.style.display = 'none';
+	}
+});
+
+let middleName = false;
+
 // Dark Mode Toggle
 
 function darkmodeToggle() {
