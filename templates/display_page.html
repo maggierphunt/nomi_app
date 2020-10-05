@@ -44,121 +44,155 @@
 <!-- Main Results Page --> 
 
 <section id="content-wrap">
-<br>
-{% if NickName %}
-
-    <div class="display-card">
-        <div class="display-card-body">
-            <i>I go by</i> <h2>{{NickName}}</h2>
-            <h5>{{NickNamePronunciation}}</h5>
-
-{% else %} {% endif %}
-        </div></div>
-    <div class="display-card">
-        <div class="display-card-body">
-
-            {% if NickName %}
-
-            <i>and my name is</i>
-
-            {% else %} {% endif %}
-
-            <h2>{{FirstName}}
-            
-              {% if LastName %}
-
-                {{LastName}}</h2>
-
-            {% else %} {% endif %}
-
-            <h5>
-
-                {{FirstNamePronunciation}}
-
-                {% if LastName %}
-
-                - {{LastNamePronunciation}}
-
-                {% else %} {% endif %}
-
-            </h5>
-
-                {% if Gender %}
-
-                <p>{{Gender}}</p>
-
-                {% else %} {% endif %}
-
-                {% if NameRecording %}
-
-                <audio id="recordedAudio2">
-                    <source src="{{NameRecording}}" type="audio/ogg">
-                </audio>
-          
-                <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="getElementById('recordedAudio2').play()" width="3%" height="auto">
-
-                {% else %} {% endif %}
-
-  </div>
-</div>
-
-    <div class="display-card">
-
-        {% if FirstNameImage %}
-
-        <div class="card-image-top">
-      
-        <img src="{{ FirstNameImage }}" type="image"id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
-        </div
-        {% else %} {% endif %}
-
-        <div class="display-card-body">
-
-            {% if LastName %}
-
-            <h5>{{FirstName}}</h5>
-
-            {% else %} {% endif %}
-
-            <i>Origin and meaning</i>
-            <br>
-
-            <p>{{FreeTextContentFirstName}}</p>
-            <p>{{FirstNameOrigin}}</p>
-
-        </div>
-    </div>
-
-    {% if LastName %}
-
-    <div class="display-card">
-      {% if LastNameImage %}
-
-        
-        <div class="card-image-top">
-          <img src="{{ LastNameImage }}" type="image"id="LastNameImage" class="card-image-top" alt="Image of how to write my Last Name">
-  </div
-       
-      {% else %} {% endif %}
-
-        <div class="display-card-body">
-
-            <h5>{{LastName}}</h5>
-            <i>Origin and meaning</i>
-            <br>
-            <p>{{FreeTextContentLastName}}</p>
-            <p>{{LastNameOrigin}}</p>
-        </div>
-    </div>
-
-    {% else %} {% endif %}
-
+  <br>
+  {% if NickName %}
   
-
+      <div class="display-card">
+          <div class="display-card-body">
+              <i>I go by</i> <h2>{{NickName}}</h2>
+              <h5>{{NickNamePronunciation}}</h5>
+  
+  {% else %} {% endif %}
+          </div></div>
+      <div class="display-card">
+          <div class="display-card-body">
+  
+              {% if NickName %}
+  
+              <i>and my name is</i>
+  
+              {% else %} {% endif %}
+  
+              <h2>{{FirstName}}
+  
+                {% if MiddleName %}
+                 
+                {{MiddleName}}
+  
+                {% else %} {% endif %}
+              
+                {% if LastName %}
+  
+                  {{LastName}}</h2>
+  
+              {% else %} {% endif %}
+  
+              <h5>
+  
+                  {{FirstNamePronunciation}}
+  
+                  {% if MiddleName %}
+                 
+                  - {{MiddleNamePronunciation}}
+  
+                  {% else %} {% endif %}
+  
+                  {% if LastName %}
+  
+                  - {{LastNamePronunciation}}
+  
+                  {% else %} {% endif %}
+  
+              </h5>
+  
+                  {% if Gender %}
+  
+                  <p>{{Gender}}</p>
+  
+                  {% else %} {% endif %}
+  
+                  {% if NameRecording %}
+  
+                  <audio id="recordedAudio2">
+                      <source src="{{NameRecording}}" type="audio/ogg">
+                  </audio>
+            
+                  <img src="/static/images/play-icon-vector.jpg" alt="Play Recording" onclick="getElementById('recordedAudio2').play()" width="5%" height="auto">
+  
+                  {% else %} {% endif %}
+  
+    </div>
+  </div>
+  
+      <div class="display-card">
+  
+          {% if FirstNameImage %}
+  
+          <div class="card-image-top">
+        
+          <img src="{{ FirstNameImage }}" type="image"id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
+          </div>
+          {% else %} {% endif %}
+  
+          <div class="display-card-body">
+  
+              {% if (LastName or MiddleName) %}
+  
+              <h5>{{FirstName}}</h5>
+  
+              {% else %} {% endif %}
+  
+              <i>Origin and meaning</i>
+              <br>
+  
+              <p>{{FreeTextContentFirstName}}</p>
+              <p>{{FirstNameOrigin}}</p>
+  
+          </div>
+      </div>
+      {% if MiddleName %}
+  
+      <div class="display-card">
+        {% if MiddleNameImage %}
+  
+          
+          <div class="card-image-top">
+            <img src="{{ MiddleNameImage }}" type="image"id="MiddleNameImage" class="card-image-top" alt="Image of how to write my Middle Name">
+          </div> {% else %} {% endif %}
+         
+        
+  
+          <div class="display-card-body">
+  
+              <h5>{{MiddleName}}</h5>
+              <i>Origin and meaning</i>
+              <br>
+              <p>{{FreeTextContentMiddleName}}</p>
+              <p>{{MiddleNameOrigin}}</p>
+          </div>
+      </div>
+  
+      {% else %} {% endif %}
+  
+      {% if LastName %}
+  
+      <div class="display-card">
+        {% if LastNameImage %}
+  
+          
+          <div class="card-image-top">
+            <img src="{{ LastNameImage }}" type="image"id="LastNameImage" class="card-image-top" alt="Image of how to write my Last Name">
+          </div> {% else %} {% endif %}
+         
+        
+  
+          <div class="display-card-body">
+  
+              <h5>{{LastName}}</h5>
+              <i>Origin and meaning</i>
+              <br>
+              <p>{{FreeTextContentLastName}}</p>
+              <p>{{LastNameOrigin}}</p>
+          </div>
+      </div>
+  
+      {% else %} {% endif %}
+  
+    
     <div class="download-container">
         <a href="/widget"><i class="fas fa-download download-button"></i></a>
     </div>
-
+    <br><br><br><br><br><br>
 </section>
 
 
