@@ -64,6 +64,12 @@
             {% else %} {% endif %}
 
             <h2>{{FirstName}}
+
+              {% if MiddleName %}
+               
+              - {{MiddleName}}
+
+              {% else %} {% endif %}
             
               {% if LastName %}
 
@@ -74,6 +80,12 @@
             <h5>
 
                 {{FirstNamePronunciation}}
+
+                {% if MiddleName %}
+               
+                - {{MiddleNamePronunciation}}
+
+                {% else %} {% endif %}
 
                 {% if LastName %}
 
@@ -109,12 +121,12 @@
         <div class="card-image-top">
       
         <img src="{{ FirstNameImage }}" type="image"id="FirstNameImage" class="card-image-top" alt="Image of how to write my First Name">
-        </div
+        </div>
         {% else %} {% endif %}
 
         <div class="display-card-body">
 
-            {% if LastName %}
+            {% if (LastName or MiddleName) %}
 
             <h5>{{FirstName}}</h5>
 
@@ -128,6 +140,29 @@
 
         </div>
     </div>
+    {% if MiddleName %}
+
+    <div class="display-card">
+      {% if MiddleNameImage %}
+
+        
+        <div class="card-image-top">
+          <img src="{{ MiddleNameImage }}" type="image"id="MiddleNameImage" class="card-image-top" alt="Image of how to write my Middle Name">
+        </div> {% else %} {% endif %}
+       
+      
+
+        <div class="display-card-body">
+
+            <h5>{{MiddleName}}</h5>
+            <i>Origin and meaning</i>
+            <br>
+            <p>{{FreeTextContentMiddleName}}</p>
+            <p>{{MiddleNameOrigin}}</p>
+        </div>
+    </div>
+
+    {% else %} {% endif %}
 
     {% if LastName %}
 
@@ -137,9 +172,9 @@
         
         <div class="card-image-top">
           <img src="{{ LastNameImage }}" type="image"id="LastNameImage" class="card-image-top" alt="Image of how to write my Last Name">
-  </div
+        </div> {% else %} {% endif %}
        
-      {% else %} {% endif %}
+      
 
         <div class="display-card-body">
 
