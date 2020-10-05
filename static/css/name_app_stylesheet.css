@@ -174,7 +174,7 @@ select,
 	margin: 0 auto;
 	overflow: hidden;
 	z-index: 0;
-
+}
 .first-name-error,
 .last-name-error {
 	display: none;
@@ -237,7 +237,7 @@ select,
 	right: 0px;
 	z-index: 1;
 
-
+}
 .about-page-footer {
 	position: fixed;
 	bottom: 0;
