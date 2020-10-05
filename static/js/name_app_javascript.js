@@ -29,6 +29,25 @@ const stylesOff = {
 	boxShadow: 'none',
 	backgroundColor: 'white'
 };
+// add nickname toggle
+
+
+const showNickName = document.querySelector('.nickname-add');
+const NickNameBtn = document.querySelector('.nickname-photo');
+
+nickNameBtn.addEventListener('click', function(event) {
+	nickName = !nickName;
+
+	if (nickName === true) {
+		showNickName.style.display = 'inline';
+		const r = document.createElement('r');
+		showNickName.appendChild(r);
+	} else {
+		showNickName.style.display = 'none';
+	}
+});
+
+let ickName = false;
 
 // Add Middle Name Toggle
 
@@ -48,6 +67,24 @@ middleNameBtn.addEventListener('click', function(event) {
 });
 
 let middleName = false;
+// Add Last Name Toggle
+
+const showLastName = document.querySelector('.lastname-add');
+const LastNameBtn = document.querySelector('.lastname-photo');
+
+lastNameBtn.addEventListener('click', function(event) {
+	lastName = !lastName;
+
+	if (lastName === true) {
+		showLastName.style.display = 'inline';
+		const q = document.createElement('q');
+		showLastName.appendChild(q);
+	} else {
+		showLastName.style.display = 'none';
+	}
+});
+
+let lastName = false;
 
 // Dark Mode Toggle
 

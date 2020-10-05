@@ -124,6 +124,29 @@ select,
 	border: 1px solid #007a7c !important;
 }
 
+/*name adding */
+
+.nickname-title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.nickname-title p {
+	margin: 0;
+}
+
+.nickname-photo {
+	color: #007a7c;
+	margin-right: 0.5em;
+	cursor: pointer;
+	font-size: 2em;
+}
+
+.nickname-add {
+	display: none;
+}
+
 .middlename-title {
 	display: flex;
 	flex-direction: row;
@@ -142,6 +165,28 @@ select,
 }
 
 .middlename-add {
+	display: none;
+}
+
+
+.lastname-title {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.lastname-title p {
+	margin: 0;
+}
+
+.lastname-photo {
+	color: #007a7c;
+	margin-right: 0.5em;
+	cursor: pointer;
+	font-size: 2em;
+}
+
+.lastname-add {
 	display: none;
 }
 

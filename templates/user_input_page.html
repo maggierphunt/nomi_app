@@ -76,18 +76,19 @@
         <textarea class="form-control shadow-none" id="FirstNameFreeTextContent" rows="3" name="FirstNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?" required></textarea>
       </div>
       <!-- Adding Preferred Name-->
-      <div class="form-group middlename-title"> 
-        <i class="middlename-photo fas fa-plus-circle"></i>
+      <div class="form-group nickname-title"> 
+        <i class="nickname-photo fas fa-plus-circle"></i>
           <p>Add a preferred name / nickname</p>
       </div>
-      <div class="form-group iddlename-title">
+      <div class="form-group nickname-title">
         <label for="NickName">If different, what name do you go by?</label>
         <input type="string" class="form-control shadow-none" id="NickName" name="NickName" placeholder="What is your preferred name / nickname?">
       </div>
-      <div class="form-group iddlename-title" >
+      <div class="form-group nickname-title" >
         <label for="NickNamePronunciation">Preferred name pronunciation</label>
         <input type="string" class="form-control shadow-none" id="NickNamePronunciation" name="NickNamePronunciation" placeholder="e.g. lin">
       </div>  
+
       <!-- Adding Middle Name-->
       <div class="form-group middlename-title"> 
         <i class="middlename-photo fas fa-plus-circle"></i>
@@ -103,7 +104,7 @@
         <input onchange='validateLastName(this)' type="file" id="MiddleNameImage" class="custom-file-input shadow-none" name="MiddleNameImage">
         <label id="MiddleNameLabel"  class="custom-file-label" for="MiddleNameImage">Select image...</label>
         
-    </div></div>
+    </div>
     <div class="alert alert-primary last-name-error"></div>
 
 
@@ -115,18 +116,18 @@
         <label for="MiddleNameFreeTextContent">Further information about your middle name</label>
         <textarea class="form-control shadow-none" id="MiddleNameFreeTextContent" rows="3" name="MiddleNameFreeTextContent"></textarea>
       </div>
-
+</div>
 
  <!-- Adding Last Name-->
- <div class="form-group middlename-title"> 
-  <i class="middlename-photo fas fa-plus-circle"></i>
+ <div class="form-group lastname-title"> 
+  <i class="lastname-photo fas fa-plus-circle"></i>
     <p>Add a last name</p>
 </div>
-      <div class="form-group middlename-add">
+      <div class="form-group lastname-add">
         <label for="LastName">Last name</label>
         <input type="string" class="form-control shadow-none" id="LastName" name="LastName" placeholder="Enter your last name here">
       </div>
-      <div class="form-group middlename-add">
+      <div class="form-group lastname-add">
         <label for="LastNameImage">Upload an image of how to write your last name (optional) MAX UP TO 2MB</label>
       <div class="custom-file image-upload--container">
         <input onchange='validateLastName(this)' type="file" id="LastNameImage" class="custom-file-input shadow-none" name="LastNameImage">
@@ -136,11 +137,11 @@
     <div class="alert alert-primary last-name-error"></div>
 
 
-      <div class="form-group middlename-add">
+      <div class="form-group lastname-add">
         <label for="LastNamePronunciation">Last name pronunciation</label>
         <input type="string" class="form-control shadow-none" id="LastNamePronunciation" name="LastNamePronunciation" placeholder="e.g. mon-ro">
       </div>
-      <div class="form-group middlename-add">
+      <div class="form-group lastname-add">
         <label for="LastNameFreeTextContent">Further information about your last name</label>
         <textarea class="form-control shadow-none" id="LastNameFreeTextContent" rows="3" name="LastNameFreeTextContent"></textarea>
       </div>

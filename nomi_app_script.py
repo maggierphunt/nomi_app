@@ -154,7 +154,9 @@ def results_page():
         lastName = form_data['LastName']
         nickName = form_data['NickName']
         gender = form_data['selectGender']
+        MiddleName - form_data["MiddleName"]
         FirstNameImage = request.files['FirstNameImage']
+        MiddleNameImage = request.files['MiddleNameImage']
         LastNameImage = request.files['LastNameImage']
         audio = form_data['NameRecording']
  
@@ -166,10 +168,14 @@ def results_page():
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
         FirstNameImage = FirstNameImage,
+        MiddleName = form_data["MiddleName"],
+        MiddleNamePronunciation = form_data["MiddleNamePronunciation"],
+        MiddleNameImage = MiddleNameImage,
         NameRecording=audio,
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
-       # FreeTextContentFirstName = form_data["FreeTextContentFirstName"],
+        #FreeTextContentFirstName = form_data["FreeTextContentFirstName"],
+        #FreeTextContentMiddleName = form_data["FreeTextContentMiddleName"],
         #FreeTextContentLastName = form_data["FreeTextContentLastName"],
         LastNameImage = LastNameImage
         )
