@@ -220,7 +220,6 @@ function play() {
 function playAudio() {
 	recordedAudio2.play();
 }
-
 //image -  copied from recording!
 
 //navigator.mediaDevices.getUserMedia({ img: true }).then(image1);{
