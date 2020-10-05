@@ -364,7 +364,7 @@ input:checked + .slider:before {
 	float: right;
 	border: none;
 	color: white;
-	boxShadow: none;
+	box-Shadow: none;
 	background-color: salmon;
 }
 
