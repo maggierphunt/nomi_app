@@ -56,7 +56,7 @@
       <!--First Name input-->
       <div class="form-group">
         <label for="FirstName">First Name</label>
-        <input type="string" class="form-control shadow-none" id="FirstName" name="FirstName" placeholder="Enter your first name here - be that your family name or given name!" required>
+        <input type="string" class="form-control shadow-none" id="FirstName" name="FirstName" placeholder="Enter your first name here" required>
       </div>
       <div class="form-group"><label for="FirstNameImage">Upload an image of how to write your first name (optional)</label>
         <label for="">MAX UP TO 2MB</label>
@@ -87,7 +87,7 @@
 <!--Middle Name input-->
       <div class="form-group">
         <label for="MiddleName">Middle Name</label>
-        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your Middle name here - be that your family name or given name!" required>
+        <input type="string" class="form-control shadow-none" id="MiddleName" name="MiddleName" placeholder="Enter your Middle name here">
       </div>
       <div class="form-group"><label for="MiddleNameImage">Upload an image of how to write your Middle name (optional)</label>
         <label for="">MAX UP TO 2MB</label>
@@ -95,14 +95,14 @@
           <input type="file" onchange='validateMiddleName(this)' id="MiddleNameImage" class="custom-file-input shadow-none" name="MiddleNameImage">
           <label id="MiddleNameLabel" class="custom-file-label" for="MiddleNameImage">Select image...</label>
         </div></div>
-        <div class="alert alert-primary Middle-name-error"></div>
+       <!-- <div class="alert alert-primary middle-name-error"></div>-->
       <div class="form-group" >
         <label for="MiddleNamePronunciation">Middle Name Pronunciation</label>
-        <input type="string" class="form-control shadow-none" id="MiddleNamePronunciation" name="MiddleNamePronunciation" placeholder="e.g. mar-i-lin" required>
+        <input type="string" class="form-control shadow-none" id="MiddleNamePronunciation" name="MiddleNamePronunciation" placeholder="e.g. dj-een">
       </div>
       <div class="form-group">
         <label for="MiddleNameFreeTextContent">Further information about your Middle name</label>
-        <textarea class="form-control shadow-none" id="MiddleNameFreeTextContent" rows="3" name="MiddleNameFreeTextContent" placeholder="e.g. are you named after a famous person? Does your name have origins in a particular language or tradition? What does it mean?"></textarea>
+        <textarea class="form-control shadow-none" id="MiddleNameFreeTextContent" rows="3" name="MiddleNameFreeTextContent" placeholder=""></textarea>
       </div>
 
 <!--Last Name input-->
@@ -159,9 +159,9 @@
       </div>
       <button type="submit" id="submit-btn" >Submit</button>
     </form>
-    <br><br><br><br><br><br>
+    
   </div>
-
+  <br><br><br><br><br><br>
 </section>
   <!-- Footer -->
 

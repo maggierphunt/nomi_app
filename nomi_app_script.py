@@ -110,6 +110,7 @@ def results_page():
         firstName = form_data['FirstName']
         lastName = form_data['LastName']
         nickName = form_data['NickName']
+        middleName = form_data['MiddleName']
         gender = form_data["selectGender"]
         audio = form_data["NameRecording"]
 
@@ -117,15 +118,20 @@ def results_page():
         NickName = form_data["NickName"],
         NickNamePronunciation = form_data["NickNamePronunciation"],
         FirstName = form_data['FirstName'],
+        MiddleName = form_data["MiddleName"],
         LastName = form_data["LastName"],
         FirstNamePronunciation = form_data["FirstNamePronunciation"],
-        # FirstNameImage = form_data["FirstNameImage"],
+        #FirstNameImage = form_data["FirstNameImage"],
         NameRecording=audio,
+        MiddleNamePronunciation = form_data["MiddleNamePronunciation"],
         LastNamePronunciation = form_data["LastNamePronunciation"],
         Gender = form_data["selectGender"],
         FreeTextContentFirstName = form_data["FirstNameFreeTextContent"],
-        FreeTextContentLastName = form_data["LastNameFreeTextContent"],
-        #LastNameImage = form_data["LastNameImage"]
+        FreeTextContentMiddleName = form_data["MiddleNameFreeTextContent"],
+        #MiddleNameImage = form_data["MiddleNameImage"],
+        FreeTextContentLastName = form_data["LastNameFreeTextContent"]
+        #,
+        # LastNameImage = form_data["LastNameImage"]
         )
 
 @app.route("/widget")
