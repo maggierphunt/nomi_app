@@ -29,16 +29,8 @@ h5 {
 .header-container {
 	width: 100%;
 	background-color: #007a7c;
-	color: white;
-	font-size: larger;
 	text-align: center;
-	border: 0px;
 	padding: 20px 0;
-	align-self: center;
-	top: 0;
-	left: 0px;
-	right: 0px;
-	line-height: 40px;
 	box-shadow: 0px 0px 23px -1px rgba(0, 0, 0, 0.75);
 }
 
@@ -47,29 +39,18 @@ h5 {
 	height: 100%;
 }
 
+#about-page--container {
+	text-align: center;
+	word-wrap: break-word;
+	margin: 1em 0;
+}
+
 #content-wrap {
 	text-align: center;
 	word-wrap: break-word;
 	margin: 1em 0;
 	position: relative;
 }
-
-/*bullets and links for header */
-/* ul {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	text-align: center;
-	display: inline-block;
-}
-
-li {
-	list-style-type: none;
-	margin: 0 3vw;
-	padding: 0;
-	display: inline-block;
-	text-align: center;
-} */
 
 .navigation {
 	display: flex;
@@ -115,28 +96,6 @@ li {
 	visibility: visible;
 	width: 100%;
 }
-
-/* .navigation li a {
-	display: inline-block;
-	position: relative;
-	display: block;
-} */
-
-/* .navigation li a:link {
-	text-decoration: none;
-}
-
-.navigation li a:visited {
-	text-decoration: none;
-} */
-
-/* .navigation li a:hover {
-	color: slategrey;
-} */
-
-/* .navigation li a:active {
-	text-decoration: none;
-} */
 
 /* Form */
 
@@ -273,6 +232,12 @@ select,
 	z-index: 0;
 }
 
+.about-page-footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
 .footer-navbar {
 	position: relative;
 	display: flex;
@@ -317,15 +282,6 @@ select,
 	font-size: 1em;
 	margin: 0;
 }
-
-/* zoom buttons centering */
-
-/* #centered {
-	display: inline-block;
-	align-content: center;
-	justify-content: center;
-	flex-direction: row;
-} */
 
 /* Switch - Dark Mode */
 
