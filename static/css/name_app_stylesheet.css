@@ -225,7 +225,7 @@ select,
 
 .footer-container {
 	display: flex;
-	position: relative;
+	position: fixed;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0.5em;
