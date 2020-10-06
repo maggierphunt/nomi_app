@@ -1,0 +1,1 @@
+web: python nomi_app_script.py
