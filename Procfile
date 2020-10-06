@@ -1,1 +1,1 @@
-web: python nomi_app_script.py
+web: python3 nomi_app_script.py
